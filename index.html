@@ -262,12 +262,19 @@
         $('.blocklyTreeRow').css('width', treeRowWidth + 'px');
         $('.blocklyTreeRow').css('height', window.innerHeight / 5.5);
     }
+    $.ajaxSetup({
+        cache: false
+    });
     $(document).ready(function () {
         adjustInterface();
         //set up canvas
         var tabMaxHeight = document.getElementsByClassName('tabmax')[0].offsetHeight;
         CANVAS_WIDTH = window.innerWidth * 0.4;
         CANVAS_HEIGHT = (window.innerHeight - ( document.getElementsByClassName('blocklyToolboxDiv')[0].offsetHeight + tabMaxHeight));
+
+
+
+
         document.getElementById('canvas_special').style.margin = tabMaxHeight + "px 0px 0px " + window.innerWidth * 0.6 + "px";
 
 
