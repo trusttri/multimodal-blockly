@@ -210,7 +210,8 @@ Block.prototype.move = function(cursorPosition){
     }
 
 
-    var layoutOffset = [0, $('.tabmax')[0].offsetHeight];
+    //var layoutOffset = [0, $('.tabmax')[0].offsetHeight];
+    var layoutOffset = [0, document.getElementById('tab_blocks').offsetHeight]
     var blockWidth = this.blockSvg.width;
     var blockHeight = this.blockSvg.height;
     var processedCursor = [cursorPosition[0] - layoutOffset[0] - blockWidth/2, cursorPosition[1] - layoutOffset[1] - blockHeight/2]

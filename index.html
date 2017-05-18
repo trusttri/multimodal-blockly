@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="stylesheet/modal-style.css">
 
     <!--jQuery 3-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
     <!--blockly code-->
     <script src="/storage.js"></script>
     <script src="blockly/blockly_uncompressed.js"></script>
@@ -59,7 +57,6 @@
     <script src="js/node_modules/three/examples/js/controls/VRControls.js"></script>
     <script src="js/node_modules/three/examples/js/effects/VREffect.js"></script>
     <script src="js/polyfill/webvr-polyfill.js"></script>
-    <script src="js/Reticulum/reticulum.js"></script>
     <script src="js/Physijs/physi.js"></script>
     <script src="obj_js/OBJMTLLoader.js"></script>
     <script src="obj_js/MTLLoader.js"></script>
@@ -117,6 +114,9 @@
                             <button id="speechModalButton" class="notext primary" title="...">
                                 speech modal
                             </button>
+                            <audio id="myAudio">
+                                <source src="media/vr_play.mp3" type="audio/mpeg">
+                            </audio>
                         </td>
                     </tr>
                 </table>
@@ -245,163 +245,68 @@
 
 <!--div setup for vr scene-->
 <script>
-    var CANVAS_WIDTH;
-    var CANVAS_HEIGHT;
+
     var idToObject = {};
     var idToLabel = {};
     var objectNextId = 0;
     var labelID = 0;
-    var ground, texture, scene, controls, effect, camera;
+    var ground, texture, scene, controls, effect, camera, vrDisplay;
     var audioListener, playList;
     var prevTime = 0;
+    var lastRender = 0;
 
-    function adjustInterface() {
-        var borderOfTreeRowDiv = 8;
-        var categoryNum = 5;
-        var treeRowWidth = (window.innerWidth - borderOfTreeRowDiv * categoryNum ) / categoryNum;
-        $('.blocklyTreeRow').css('width', treeRowWidth + 'px');
-        $('.blocklyTreeRow').css('height', window.innerHeight / 5.5);
+    function animate(timestamp) {
+        var delta = Math.min(timestamp - lastRender, 500);
+        lastRender = timestamp;
+        for (i in idToLabel) {
+            idToLabel[i].update(idToLabel[i].parent.score);
+        }
+
+        controls.update();
+        camera.updateMatrixWorld();
+        effect.render(scene, camera);
+        vrDisplay.requestAnimationFrame(animate);
+        TWEEN.update();
     }
-    $.ajaxSetup({
-        cache: false
-    });
-    $(document).ready(function () {
-        adjustInterface();
-        //set up canvas
-        var tabMaxHeight = document.getElementsByClassName('tabmax')[0].offsetHeight;
-        CANVAS_WIDTH = window.innerWidth * 0.4;
-        CANVAS_HEIGHT = (window.innerHeight - ( document.getElementsByClassName('blocklyToolboxDiv')[0].offsetHeight + tabMaxHeight));
+
+    function setCameraControls(canvas_width , canvas_height, renderer) {
+        camera = new THREE.PerspectiveCamera(35, canvas_width/canvas_height, 1, 10000);
+        camera.position.x = 10;
+        camera.position.y = 10;
+        camera.position.z = 5;
+        camera.lookAt(scene.position);
+        scene.add(camera);
+        camera.position.set(10, 10, 5);
+        controls = new THREE.VRControls(camera);
+        effect = new THREE.VREffect(renderer);
+        effect.setSize(canvas_width , canvas_height);
+    }
+
+    function addMusic() {
+        audioListener = new THREE.AudioListener();
+        camera.add(audioListener);
+        playList = new THREE.Audio(audioListener);
+        scene.add(playList);
+    }
 
 
+    function onVRDisplayPresentChange() {
+        console.log('onVRDisplayPresentChange');
+    }
 
-
-        document.getElementById('canvas_special').style.margin = tabMaxHeight + "px 0px 0px " + window.innerWidth * 0.6 + "px";
-
-
-        //background
-        //mini container
-        container = document.getElementById('canvas_special');
-        Physijs.scripts.worker = 'physijs_worker.js';
-        Physijs.scripts.ammo = 'ammo.js';
-        var renderer = new THREE.WebGLRenderer();
-        //renderer.setPixelRatio(Math.floor(window.devicePixelRatio));
-        renderer.setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
-        container.appendChild(renderer.domElement);
-        scene = new Physijs.Scene({fixedTimeStep: 1 / 120});
-        scene.setGravity(new THREE.Vector3(0, -10, 0));
-        scene.addEventListener(
-            'update',
-            function () {
-                scene.simulate(undefined, 2);
-            }
-        );
-        setCameraControls();
-        addMusic();
-        addReticulum();
-        addBackground();
-        createCube(0, 6, -20, 1);
-        createCube(0, 12, -20, 1);
-        var vrDisplay = null;
-        navigator.getVRDisplays().then(function (displays) {
-            if (displays.length > 0) {
-                vrDisplay = displays[0];
-                // Kick off the render loop.
-                vrDisplay.requestAnimationFrame(animate);
-                scene.simulate();
-            }
-        });
-        window.addEventListener('vrdisplaypresentchange', onVRDisplayPresentChange);
-
-        var lastRender = 0;
-
-        function animate(timestamp) {
-            var delta = Math.min(timestamp - lastRender, 500);
-            lastRender = timestamp;
-            for (i in idToLabel) {
-                idToLabel[i].update(idToLabel[i].parent.score);
-            }
-            Reticulum.update();
-            controls.update();
-            camera.updateMatrixWorld();
-            effect.render(scene, camera);
-            vrDisplay.requestAnimationFrame(animate);
-            TWEEN.update();
+    function enterFullscreen(el) {
+        if (el.requestFullscreen) {
+            el.requestFullscreen();
+        } else if (el.mozRequestFullScreen) {
+            el.mozRequestFullScreen();
+        } else if (el.webkitRequestFullscreen) {
+            el.webkitRequestFullscreen();
+        } else if (el.msRequestFullscreen) {
+            el.msRequestFullscreen();
         }
-
-        function setCameraControls() {
-            camera = new THREE.PerspectiveCamera(35, CANVAS_WIDTH / CANVAS_HEIGHT, 1, 10000);
-            camera.position.x = 10;
-            camera.position.y = 10;
-            camera.position.z = 5;
-            camera.lookAt(scene.position);
-            scene.add(camera);
-            camera.position.set(10, 10, 5);
-            controls = new THREE.VRControls(camera);
-            effect = new THREE.VREffect(renderer);
-            effect.setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
-        }
-
-        function addMusic() {
-            audioListener = new THREE.AudioListener();
-            camera.add(audioListener);
-            playList = new THREE.Audio(audioListener);
-            scene.add(playList);
-        }
-
-        function addReticulum() {
-            Reticulum.init(camera, {
-                proximity: false,
-                clickevents: true,
-                reticle: {
-                    visible: true,
-                    restPoint: 1000, //Defines the reticle's resting point when no object has been targeted
-                    color: 0xcc00cc,
-                    innerRadius: 0.0001,
-                    outerRadius: 0.003,
-                    hover: {
-                        color: 0x00cccc,
-                        innerRadius: 0.02,
-                        outerRadius: 0.024,
-                        speed: 5,
-                        vibrate: 50 //Set to 0 or [] to disable
-                    }
-                },
-                fuse: {
-                    visible: false,
-                    duration: 2.5,
-                    color: 0x00fff6,
-                    innerRadius: 0.045,
-                    outerRadius: 0.06,
-                    vibrate: 0, //Set to 0 or [] to disable
-                    clickCancelFuse: false //If users clicks on targeted object fuse is canceled
-                }
-            });
-        }
-
-        function onVRDisplayPresentChange() {
-            console.log('onVRDisplayPresentChange');
-        }
-
-        function enterFullscreen(el) {
-            if (el.requestFullscreen) {
-                el.requestFullscreen();
-            } else if (el.mozRequestFullScreen) {
-                el.mozRequestFullScreen();
-            } else if (el.webkitRequestFullscreen) {
-                el.webkitRequestFullscreen();
-            } else if (el.msRequestFullscreen) {
-                el.msRequestFullscreen();
-            }
-        }
+    }
 
 
-        //start mapping cursor
-        if (document.getElementById("abs_mapping_stage")) {
-            mapCursor();
-        }
-
-
-    });
 
 </script>
 
@@ -432,6 +337,9 @@
             }
         };
     }
+
+
+
 
 </script>
 

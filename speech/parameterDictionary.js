@@ -165,6 +165,3 @@ var paramInfo = {
     }
 }
 
-$(document).ready(function(){
-    sessionStorage.setItem("paramInfo", JSON.stringify(paramInfo));
-})

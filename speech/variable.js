@@ -35,3 +35,21 @@ createVariable = function(variableName){
 initializeVariableList = function(){
     Blockly.mainWorkspace.variableList = ["foo"];
 }
+
+
+initializeToNumber = function(number, varBlock){
+    number_xml = Blockly.mainWorkspace.toolbox_.tree_.getChildren()[3].blocks[0];
+    numBlock = Blockly.Xml.domToBlock(Blockly.mainWorkspace, number_xml)
+    numBlock.setFieldValue(number , "NUM");
+    variableCon = varBlock.getConnections_(false)[2]
+    numberCon = numBlock.getConnections_(false)[0]
+    variableCon.connect(numberCon);
+}
+
+intializeVariableWithSpeech = function(){
+    var setOfBlock = '<block type="variables_set" id="_ounmI1X*T@xPSs!?kwn"><field name="VAR">x</field><value name="VALUE"><block type="math_number" id="7^WuutlK,x^B/7s{up{b"><field name="NUM">0</field></block></value></block>'
+}
+
+makeVarBlock = function(varName, selectedBlock){
+    selectedBlock.setFieldValue(varName , "VAR")
+}

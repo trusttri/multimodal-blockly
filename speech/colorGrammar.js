@@ -237,10 +237,10 @@ var getVariableGrammar = {
 
 };
 
-$(document).ready(function(){
-    sessionStorage.setItem("grammarInfo", JSON.stringify(grammarInfo));
-})
-//})();
+// $(document).ready(function(){
+//     sessionStorage.setItem("grammarInfo", JSON.stringify(grammarInfo));
+// })
+// //})();
 
 processResult = function(result){
     var params = [];
@@ -267,71 +267,71 @@ processResult = function(result){
     return params;
 }
 
-
-
-var parser = new nearley.Parser(grammarInfo["move_object_direction"].ParserRules, grammarInfo["move_object_direction"].ParserStart);
-parser.feed("1 12 up 2");
-var result = parser.results[0];
-console.log("move object");
-console.log(result);
-console.log(processResult(result));
-
-var parser = new nearley.Parser(grammarInfo["set_color"].ParserRules, grammarInfo["set_color"].ParserStart);
-parser.feed("1 red");
-var result = parser.results[0];
-console.log("set color");
-console.log(result);
-console.log(processResult(result));
-
-var parser = new nearley.Parser(grammarInfo["logic_boolean"].ParserRules, grammarInfo["logic_boolean"].ParserStart);
-parser.feed("true");
-var result = parser.results[0];
-console.log("boolean");
-console.log(result);
-console.log(processResult(result));
-
-var parser = new nearley.Parser(grammarInfo["controls_repeat_ext"].ParserRules, grammarInfo["controls_repeat_ext"].ParserStart);
-parser.feed("2");
-var result = parser.results[0];
-console.log("control repeat");
-console.log(result);
-console.log(processResult(result));
-
-
-var parser = new nearley.Parser(grammarInfo["controls_for"].ParserRules, grammarInfo["controls_for"].ParserStart);
-parser.feed("2 3 1");
-var result = parser.results[0];
-console.log("control for");
-console.log(result);
-console.log(processResult(result));
-
-var parser = new nearley.Parser(grammarInfo["math_number"].ParserRules, grammarInfo["math_number"].ParserStart);
-parser.feed("9");
-var result = parser.results[0];
-console.log("math number");
-console.log(result);
-console.log(processResult(result));
-
-var parser = new nearley.Parser(grammarInfo["math_arithmetic"].ParserRules, grammarInfo["math_arithmetic"].ParserStart);
-parser.feed("9 4");
-var result = parser.results[0];
-console.log("math arthmetic");
-console.log(result);
-console.log(processResult(result));
-
-var parser = new nearley.Parser(grammarInfo["math_single"].ParserRules, grammarInfo["math_single"].ParserStart);
-parser.feed("4");
-var result = parser.results[0];
-console.log("math single");
-console.log(result);
-console.log(processResult(result));
-
-var parser = new nearley.Parser(grammarInfo["math_random_int"].ParserRules, grammarInfo["math_random_int"].ParserStart);
-parser.feed("4 9");
-var result = parser.results[0];
-console.log("random int");
-console.log(result);
-console.log(processResult(result));
+//
+//
+// var parser = new nearley.Parser(grammarInfo["move_object_direction"].ParserRules, grammarInfo["move_object_direction"].ParserStart);
+// parser.feed("1 12 up 2");
+// var result = parser.results[0];
+// console.log("move object");
+// console.log(result);
+// console.log(processResult(result));
+//
+// var parser = new nearley.Parser(grammarInfo["set_color"].ParserRules, grammarInfo["set_color"].ParserStart);
+// parser.feed("1 red");
+// var result = parser.results[0];
+// console.log("set color");
+// console.log(result);
+// console.log(processResult(result));
+//
+// var parser = new nearley.Parser(grammarInfo["logic_boolean"].ParserRules, grammarInfo["logic_boolean"].ParserStart);
+// parser.feed("true");
+// var result = parser.results[0];
+// console.log("boolean");
+// console.log(result);
+// console.log(processResult(result));
+//
+// var parser = new nearley.Parser(grammarInfo["controls_repeat_ext"].ParserRules, grammarInfo["controls_repeat_ext"].ParserStart);
+// parser.feed("2");
+// var result = parser.results[0];
+// console.log("control repeat");
+// console.log(result);
+// console.log(processResult(result));
+//
+//
+// var parser = new nearley.Parser(grammarInfo["controls_for"].ParserRules, grammarInfo["controls_for"].ParserStart);
+// parser.feed("2 3 1");
+// var result = parser.results[0];
+// console.log("control for");
+// console.log(result);
+// console.log(processResult(result));
+//
+// var parser = new nearley.Parser(grammarInfo["math_number"].ParserRules, grammarInfo["math_number"].ParserStart);
+// parser.feed("9");
+// var result = parser.results[0];
+// console.log("math number");
+// console.log(result);
+// console.log(processResult(result));
+//
+// var parser = new nearley.Parser(grammarInfo["math_arithmetic"].ParserRules, grammarInfo["math_arithmetic"].ParserStart);
+// parser.feed("9 4");
+// var result = parser.results[0];
+// console.log("math arthmetic");
+// console.log(result);
+// console.log(processResult(result));
+//
+// var parser = new nearley.Parser(grammarInfo["math_single"].ParserRules, grammarInfo["math_single"].ParserStart);
+// parser.feed("4");
+// var result = parser.results[0];
+// console.log("math single");
+// console.log(result);
+// console.log(processResult(result));
+//
+// var parser = new nearley.Parser(grammarInfo["math_random_int"].ParserRules, grammarInfo["math_random_int"].ParserStart);
+// parser.feed("4 9");
+// var result = parser.results[0];
+// console.log("random int");
+// console.log(result);
+// console.log(processResult(result));
 
 
 

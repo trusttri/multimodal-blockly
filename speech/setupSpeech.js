@@ -81,6 +81,7 @@ recognition.onresult = function(event) {
         if(control.blocks.length > 0){
             Code.runJS();
             generateSpeech("play!");
+            playAudio();
             processed = true;
         }
     } else if (userSaidDelete(interim)){
@@ -261,7 +262,7 @@ userSaidDirection = function(transcript){
 
 processParamsChosen = function(parseResult, blockChosen){
 
-    var parametersInfo = JSON.parse(sessionStorage["paramInfo"]);
+    var parametersInfo = paramInfo;
     console.log("---------params-----------");
     var paramsChosen = processResult(parseResult);
     console.log(paramsChosen);
@@ -376,3 +377,13 @@ var generateSpeech = function(message, callback) {
 };
 
 
+
+function playAudio() {
+    var audio = document.getElementById("myAudio");
+    audio.play();
+}
+
+function pauseAudio() {
+    var audio = document.getElementById("myAudio");
+    audio.pause();
+}
