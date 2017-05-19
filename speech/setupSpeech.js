@@ -238,7 +238,8 @@ var processInterim = function(transcript){
     })
 
     //check for color blue
-    trancript = transcript.replace("blew", "blue");
+    transcript = transcript.replace("blew", "blue");
+    transcript = transcript.replace("equal zero", "equals 0")
 
     return transcript;
 }
