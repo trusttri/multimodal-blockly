@@ -31,6 +31,6 @@ External Libraries used in system
 ---------------------------
 Advice on using gesture
 ---------------------------
-	It is best to adjust the distance betwen the leap motion sensor and the hand, based on the distance between the device and the screen.
-	In order to pick a block from the "viewer(the area where you put the blocks)", your hand has to be close enough to the sensor.
-	Watching the tutorial videos first is recommended. 
+- Adjust the distance betwen the leap motion sensor and the hand.
+- In order to pick a block from the "viewer(the area where you put the blocks)", your hand has to be close enough to the sensor. Otherwise the block will not be picked up. 
+- Watching the tutorial videos first is recommended.
