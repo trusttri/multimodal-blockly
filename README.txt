@@ -1,0 +1,36 @@
+multimodal-blockly
+
+Project for MIT class 6.835
+---------------------------
+How to run it.
+---------------------------
+	There are two ways to run.
+
+	1.Start local server python -m SimpleHTTPServer and go to localhost:8000
+	2.Go to https://trusttri.github.io/
+
+---------------------------
+System requirements
+---------------------------
+	Google chrome (tested on version 58)
+	Leap Motion device
+	Python 2.X (when running locally)
+
+---------------------------
+External Libraries used in system
+---------------------------
+	Blockly (https://developers.google.com/blockly/)
+	WebSpeech API (https://www.google.com/intl/en/chrome/demos/speech.html)
+	nearley (http://nearley.js.org/)
+	KineticJS (http://kineticjs.com/)
+	Leap Motion SDK (https://developer.leapmotion.com/documentation/csharp/devguide/Leap_SDK_Overview.html)
+	three.js (https://threejs.org/)
+	physi.js (http://chandlerprall.github.io/Physijs/)
+	tween.js (http://www.createjs.com/tweenjs)
+
+---------------------------
+Advice on using gesture
+---------------------------
+	It is best to adjust the distance betwen the leap motion sensor and the hand, based on the distance between the device and the screen.
+	In order to pick a block from the "viewer(the area where you put the blocks)", your hand has to be close enough to the sensor.
+	Watching the tutorial videos first is recommended. 
