@@ -6,7 +6,7 @@ How to run it.
 ---------------------------
 	There are two ways to run.
 
-	1.Start local server python -m SimpleHTTPServer and go to localhost:8000
+	1.Start local server python -m SimpleHTTPServer in ~PATH/multimodal-blockly and go to localhost:8000
 	2.Go to https://trusttri.github.io/
 
 ---------------------------
