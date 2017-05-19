@@ -4,7 +4,7 @@ Project for MIT class 6.835
 
 ## How to run it.
 There are two ways to run.
-- Start local server python -m SimpleHTTPServer and go to localhost:8000
+- Start local server python -m SimpleHTTPServer in ~PATH/multimodal-blockly and go to localhost:8000
 - Go to https://trusttri.github.io/
 
 
