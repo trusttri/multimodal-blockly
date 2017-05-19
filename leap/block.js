@@ -1,7 +1,3 @@
-/**
- * Created by Jane on 5/12/2017.
- */
-
 
 Block = function(blockSvg, cursorPosition){
     this.blockSvg = blockSvg;
@@ -19,99 +15,6 @@ Block = function(blockSvg, cursorPosition){
 }
 
 
-Blockly.RenderedConnection.prototype.closestSecond = function(maxLimit, dx, dy) {
-    return this.dbOpposite_.searchForClosestSecond(this, maxLimit, dx, dy);
-};
-
-
-Blockly.ConnectionDB.prototype.isInYRangeSecond_ = function(index, baseY, maxRadius) {
-    return (Math.abs(this[index].y_ - baseY) <= maxRadius);
-};
-
-Blockly.ConnectionDB.prototype.searchForClosestSecond = function(conn, maxRadius, dxy) {
-    // Don't bother.
-    if (!this.length) {
-        return {connection: null, radius: maxRadius};
-    }
-
-    // Stash the values of x and y from before the drag.
-    var baseY = conn.y_;
-    var baseX = conn.x_;
-    //for some reason, shouldn't update here
-    // conn.x_ = baseX + dxy.x;
-    // conn.y_ = baseY + dxy.y;
-
-    // findPositionForConnection finds an index for insertion, which is always
-    // after any block with the same y index.  We want to search both forward
-    // and back, so search on both sides of the index.
-    var closestIndex = this.findPositionForConnection_(conn);
-
-    var bestConnection = null;
-    var bestRadius = maxRadius;
-    var temp;
-
-    // Walk forward and back on the y axis looking for the closest x,y point.
-    var pointerMin = closestIndex - 1;
-    while (pointerMin >= 0 && this.isInYRangeSecond_(pointerMin, conn.y_, maxRadius)) {
-        temp = this[pointerMin];
-        //console.log("search for second");
-        if (conn.isConnectionAllowedSecond(temp, bestRadius)) {
-            bestConnection = temp;
-            bestRadius = temp.distanceFromSecond(conn);
-        }
-        pointerMin--;
-    }
-    var pointerMax = closestIndex;
-    while (pointerMax < this.length && this.isInYRange_(pointerMax, conn.y_,
-        maxRadius)) {
-        temp = this[pointerMax];
-        if (conn.isConnectionAllowed(temp, bestRadius)) {
-            bestConnection = temp;
-            bestRadius = temp.distanceFrom(conn);
-        }
-        pointerMax++;
-    }
-
-    // Reset the values of x and y.
-    conn.x_ = baseX;
-    conn.y_ = baseY;
-
-    // If there were no valid connections, bestConnection will be null.
-    return {connection: bestConnection, radius: bestRadius};
-};
-
-Blockly.RenderedConnection.prototype.distanceFromSecond = function(otherConnection) {
-    var xDiff = this.x_ - otherConnection.x_;
-    var yDiff = this.y_ - otherConnection.y_;
-    return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
-};
-
-Blockly.RenderedConnection.prototype.isConnectionAllowedSecond = function(candidate,maxRadius) {
-    if (this.distanceFromSecond(candidate) > maxRadius) {
-        return false;
-    }
-
-    return Blockly.RenderedConnection.superClass_.isConnectionAllowed.call(this,
-        candidate);
-};
-
-Control.prototype.highlightCon = function(){
-
-    //Blockly.selected && Blockly.highlightedConnection_ && a != Blockly.DELETE_AREA_TOOLBOX ? (Blockly.localConnection_.connect(Blockly.highlightedConnection_),
-    if(this.currentBlock.blockSvg!=null && Blockly.highlightedConnection_!=null){
-        Blockly.localConnection_.connect(Blockly.highlightedConnection_);
-        if(Blockly.localConnection_.isSuperior()){
-            Blockly.highlightedConnection_.getSourceBlock().connectionUiEffect();
-        }else{
-            Blockly.localConnection_.getSourceBlock().connectionUiEffect();
-        }
-    }
-    if(Blockly.highlightedConnection_ !=null){
-        Blockly.highlightedConnection_.unhighlight();
-        Blockly.highlightedConnection_ = null;
-    }
-
-}
 
 
 Block.prototype.highlightClosestConnection = function(){
@@ -241,9 +144,83 @@ Block.prototype.highlight = function(){
     this.blockSvg.select();
 }
 
-Block.prototype.unhighlight = function(){
 
-}
+Blockly.RenderedConnection.prototype.closestSecond = function(maxLimit, dx, dy) {
+    return this.dbOpposite_.searchForClosestSecond(this, maxLimit, dx, dy);
+};
+
+
+Blockly.ConnectionDB.prototype.isInYRangeSecond_ = function(index, baseY, maxRadius) {
+    return (Math.abs(this[index].y_ - baseY) <= maxRadius);
+};
+
+Blockly.ConnectionDB.prototype.searchForClosestSecond = function(conn, maxRadius, dxy) {
+    // Don't bother.
+    if (!this.length) {
+        return {connection: null, radius: maxRadius};
+    }
+
+    // Stash the values of x and y from before the drag.
+    var baseY = conn.y_;
+    var baseX = conn.x_;
+    //for some reason, shouldn't update here
+    // conn.x_ = baseX + dxy.x;
+    // conn.y_ = baseY + dxy.y;
+
+    // findPositionForConnection finds an index for insertion, which is always
+    // after any block with the same y index.  We want to search both forward
+    // and back, so search on both sides of the index.
+    var closestIndex = this.findPositionForConnection_(conn);
+
+    var bestConnection = null;
+    var bestRadius = maxRadius;
+    var temp;
+
+    // Walk forward and back on the y axis looking for the closest x,y point.
+    var pointerMin = closestIndex - 1;
+    while (pointerMin >= 0 && this.isInYRangeSecond_(pointerMin, conn.y_, maxRadius)) {
+        temp = this[pointerMin];
+        //console.log("search for second");
+        if (conn.isConnectionAllowedSecond(temp, bestRadius)) {
+            bestConnection = temp;
+            bestRadius = temp.distanceFromSecond(conn);
+        }
+        pointerMin--;
+    }
+    var pointerMax = closestIndex;
+    while (pointerMax < this.length && this.isInYRange_(pointerMax, conn.y_,
+        maxRadius)) {
+        temp = this[pointerMax];
+        if (conn.isConnectionAllowed(temp, bestRadius)) {
+            bestConnection = temp;
+            bestRadius = temp.distanceFrom(conn);
+        }
+        pointerMax++;
+    }
+
+    // Reset the values of x and y.
+    conn.x_ = baseX;
+    conn.y_ = baseY;
+
+    // If there were no valid connections, bestConnection will be null.
+    return {connection: bestConnection, radius: bestRadius};
+};
+
+Blockly.RenderedConnection.prototype.distanceFromSecond = function(otherConnection) {
+    var xDiff = this.x_ - otherConnection.x_;
+    var yDiff = this.y_ - otherConnection.y_;
+    return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+};
+
+Blockly.RenderedConnection.prototype.isConnectionAllowedSecond = function(candidate,maxRadius) {
+    if (this.distanceFromSecond(candidate) > maxRadius) {
+        return false;
+    }
+
+    return Blockly.RenderedConnection.superClass_.isConnectionAllowed.call(this,
+        candidate);
+};
+
 
 Blockly.BlockSvg.prototype.addSelectForMove = function() {
     Blockly.utils.addClass(this.svgGroup_, "blocklyLeapSelected");

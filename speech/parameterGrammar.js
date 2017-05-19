@@ -1,5 +1,5 @@
 
-var grammarInfo = {
+var parameterGrammar = {
     "move_object_direction": {
         Lexer: undefined,
         ParserRules: [
@@ -127,6 +127,7 @@ var grammarInfo = {
     }
 
 }
+
 
 var moveObjectGrammar = {
     Lexer: undefined,

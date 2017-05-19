@@ -58,7 +58,7 @@ button.disabled {
   display: none;
 }
 button.notext {
-  font-size: 10%;
+  font-size: 18px;
 }
 
 h1 {

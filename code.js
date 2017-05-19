@@ -378,70 +378,6 @@ Code.renderContent = function() {
   }
 };
 
-var adjustInterface = function() {
-    var borderOfTreeRowDiv = 8;
-    var categoryNum = 5;
-    var treeRowWidth = (window.innerWidth - borderOfTreeRowDiv * categoryNum ) / categoryNum;
-    var treeRows = document.getElementsByClassName('blocklyTreeRow')
-    for(var i=0 ; i<treeRows.length ; i++){
-        treeRows[i].style.width = treeRowWidth + 'px'
-        treeRows[i].style.height = window.innerHeight/5.5 +'px'
-    }
-
-    var tabMaxHeight = document.getElementById('tab_blocks').offsetHeight;
-    var canvas_width = window.innerWidth * 0.4;
-    var canvas_height  = (window.innerHeight - ( document.getElementsByClassName('blocklyToolboxDiv')[0].offsetHeight + tabMaxHeight));
-    document.getElementById('canvas_special').style.margin = tabMaxHeight + "px 0px 0px " + window.innerWidth * 0.6 + "px";
-    console.log("ho");
-
-    addVRScene(canvas_width, canvas_height);
-
-
-}
-
-var addVRScene = function(canvas_width, canvas_height){
-
-    //background
-    //mini container
-    var container = document.getElementById('canvas_special');
-    Physijs.scripts.worker = 'physijs_worker.js';
-    Physijs.scripts.ammo = 'ammo.js';
-    var renderer = new THREE.WebGLRenderer();
-    //renderer.setPixelRatio(Math.floor(window.devicePixelRatio));
-    renderer.setSize(canvas_width, canvas_height);
-    container.appendChild(renderer.domElement);
-    scene = new Physijs.Scene({fixedTimeStep: 1 / 120});
-    scene.setGravity(new THREE.Vector3(0, -10, 0));
-    scene.addEventListener(
-        'update',
-        function () {
-            scene.simulate(undefined, 2);
-        }
-    );
-    setCameraControls(canvas_width, canvas_height, renderer);
-    addMusic();
-    addBackground();
-    createCube(1, 5, -20, 1);
-    createCube(0, 2, -20, 1);
-    navigator.getVRDisplays().then(function (displays) {
-        if (displays.length > 0) {
-            vrDisplay = displays[0];
-            // Kick off the render loop.
-            vrDisplay.requestAnimationFrame(animate);
-            scene.simulate();
-        }
-    });
-    window.addEventListener('vrdisplaypresentchange', onVRDisplayPresentChange);
-
-
-
-    //start mapping cursor
-    if (document.getElementById("abs_mapping_stage")) {
-        mapCursor();
-    }
-
-
-}
 
 
 
@@ -608,7 +544,6 @@ Code.runJS = function() {
   var code = Blockly.JavaScript.workspaceToCode(Code.workspace);
   Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
   try {
-      //for vr
       prevTime = 0;
       eval(code);
   } catch (e) {
@@ -630,10 +565,10 @@ Code.discard = function() {
   }
 };
 
-// Load the Code demo's language strings.
-document.write('<script src="msg/' + Code.LANG + '.js"></script>\n');
-// Load Blockly's language strings.
-document.write('<script src="../../msg/js/' + Code.LANG + '.js"></script>\n');
-
+// // Load the Code demo's language strings.
+// document.write('<script src="blockly/msg/js' + Code.LANG + '.js"></script>\n');
+// // Load Blockly's language strings.
+// document.write('<script src="blockly/msg/js/' + Code.LANG + '.js"></script>\n');
+//
 
 window.addEventListener('load', Code.init);

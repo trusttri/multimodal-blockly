@@ -47,7 +47,7 @@ Blockly.JavaScript['move_object_direction'] = function(block) {
 Blockly.JavaScript['create_object'] = function(block) {
     // TODO: Assemble JavaScript into code variable.
     createCube
-    var code = 'createCube(0, 10, -20,1);\n';
+    var code = 'createCube(0, 8, -20, 1);\n';
     return code;
 };
 
