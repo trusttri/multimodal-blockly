@@ -11,6 +11,7 @@ There are two ways to run.
 ## System requirements
 - Google chrome (Tested on version 58)
 - Leap Motion device
+- Python 2.X (when runnning locally)
 
 ## External Libraries used in system
 - Blockly (https://developers.google.com/blockly/)
