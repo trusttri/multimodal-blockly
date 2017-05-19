@@ -7,7 +7,6 @@ var leapController;
 
 
 handCursorUpdate = function (hand, frame) {
-    //var leapPoint = hand.screenPosition();
     var leapPoint = hand.palmPosition;
     var iBox = frame.interactionBox;
     var normalizedPoint = iBox.normalizePoint(leapPoint, true);
@@ -138,6 +137,7 @@ leapController = Leap.loop({enableGestures: true}, function (frame) {
                     if (control.currentBlock != null) { //let the block go
                         control.highlightCon();
                         control.stopMovingBlock();
+                        generateSpeech("placed!");
                     } else {
                         //find the closest block and highlight it
                         control.hoverOverViewer(cursorPosition);

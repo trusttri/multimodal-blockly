@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="stylesheet/style.css">
     <link rel="stylesheet" href="stylesheet/modal-style.css">
 
-    <!--jQuery 3-->
     <!--blockly code-->
-    <script src="/storage.js"></script>
     <script src="blockly/blockly_uncompressed.js"></script>
     <script src="blockly/blocks/logic.js"></script>
     <script src="blockly/blocks/loops.js"></script>
@@ -32,7 +30,7 @@
     <script src="blockly/generators/javascript/vr.js"></script>
     <script src="blockly/msg/js/en.js"></script>
 
-    <!--<script src="../../javascript_compressed.js"></script>-->
+    <!--leap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kineticjs/5.0.6/kinetic.min.js"></script>
     <script src="leap/leap.min.js"></script>
     <script src="leap/leap-plugins.min.js"></script>
@@ -40,52 +38,37 @@
     <script src="leap/control_leap.js"></script>
     <script src="leap/block.js"></script>
 
+    <!-- blockly code for injection -->
     <script src="code.js"></script>
 
     <!--speech-->
     <script src="speech/nearley.js"></script>
-    <script src="speech/colorGrammar.js"></script>
-    <script src="speech/modal.js"></script>
-    <script src="speech/setupSpeech.js"></script>
+    <script src="speech/paramaterGrammar.js"></script>
+    <script src="speech/variableGrammar.js"></script>
     <script src="speech/variable.js"></script>
     <script src="speech/parameterDictionary.js"></script>
+    <script src="speech/modal.js"></script>
+    <script src="speech/setupSpeech.js"></script>
 
 
     <!--vr -->
-    <script src="js/node_modules/three/three.js"></script>
-    <script src="js/node_modules/three/examples/js/controls/OrbitControls.js"></script>
-    <script src="js/node_modules/three/examples/js/controls/VRControls.js"></script>
-    <script src="js/node_modules/three/examples/js/effects/VREffect.js"></script>
-    <script src="js/polyfill/webvr-polyfill.js"></script>
-    <script src="js/Physijs/physi.js"></script>
-    <script src="obj_js/OBJMTLLoader.js"></script>
-    <script src="obj_js/MTLLoader.js"></script>
-    <script src="obj_js/OBJLoader.js"></script>
+    <script src="vr/lib/node_modules/three/three.js"></script>
+    <script src="vr/lib/node_modules/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="vr/lib/node_modules/three/examples/js/controls/VRControls.js"></script>
+    <script src="vr/lib/node_modules/three/examples/js/effects/VREffect.js"></script>
+    <script src="vr/lib/polyfill/webvr-polyfill.js"></script>
+    <script src="vr/lib/Physijs/physi.js"></script>
+    <script src="vr/lib/obj_js/OBJMTLLoader.js"></script>
+    <script src="vr/lib/obj_js/MTLLoader.js"></script>
+    <script src="vr/lib/obj_js/OBJLoader.js"></script>
     <script src="vr/background.js"></script>
     <script src="vr/block_functions.js?rnd=143513"></script>
-    <script src="vr/label.js"></script>
-    <script src="js/tween.js"></script>
+    <script src="vr/lib/tween.js"></script>
 
 
 </head>
 <body>
 
-<div id="saveModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Set parameter with speech</h2>
-        </div>
-        <div class="modal-body" id="param-content">
-
-        </div>
-        <div class="modal-footer">
-
-        </div>
-    </div>
-
-</div>
 <div id="main-wrapper">
     <!--vr scene-->
     <div id="canvas_special"></div>
@@ -109,10 +92,7 @@
 
 				</span>
                             <button id="runButton" class="notext primary" title="...">
-                                <img src='../../media/1x1.gif' class="run icon21">
-                            </button>
-                            <button id="speechModalButton" class="notext primary" title="...">
-                                speech modal
+                                RUN
                             </button>
                             <audio id="myAudio">
                                 <source src="media/vr_play.mp3" type="audio/mpeg">
@@ -243,24 +223,91 @@
 </div>
 
 
-<!--div setup for vr scene-->
 <script>
 
-    var idToObject = {};
-    var idToLabel = {};
+    /* function for adjusting the interface according to the screen.
+    * Called in code.js
+    */
+    function adjustInterface() {
+        var borderOfTreeRowDiv = 8;
+        var categoryNum = 5;
+        var treeRowWidth = (window.innerWidth - borderOfTreeRowDiv * categoryNum ) / categoryNum;
+        var treeRows = document.getElementsByClassName('blocklyTreeRow')
+        for(var i=0 ; i<treeRows.length ; i++){
+            treeRows[i].style.width = treeRowWidth + 'px'
+            treeRows[i].style.height = window.innerHeight/5.5 +'px'
+        }
+
+        var tabMaxHeight = document.getElementById('tab_blocks').offsetHeight;
+        var canvas_width = window.innerWidth * 0.4;
+        var canvas_height  = (window.innerHeight - ( document.getElementsByClassName('blocklyToolboxDiv')[0].offsetHeight + tabMaxHeight));
+        document.getElementById('canvas_special').style.margin = tabMaxHeight + "px 0px 0px " + window.innerWidth * 0.6 + "px";
+        console.log("ho");
+
+        addVRScene(canvas_width, canvas_height);
+
+
+    }
+
+    /*
+    * Code for rendering VR scene in the editor
+    */
+
+    var idToObject = {}; //keeps track of objects(cubes)
     var objectNextId = 0;
-    var labelID = 0;
     var ground, texture, scene, controls, effect, camera, vrDisplay;
     var audioListener, playList;
     var prevTime = 0;
     var lastRender = 0;
 
+
+    function addVRScene(canvas_width, canvas_height){
+
+        //background
+        //mini container
+        var container = document.getElementById('canvas_special');
+        Physijs.scripts.worker = 'physijs_worker.js';
+        Physijs.scripts.ammo = 'ammo.js';
+        var renderer = new THREE.WebGLRenderer();
+        //renderer.setPixelRatio(Math.floor(window.devicePixelRatio));
+        renderer.setSize(canvas_width, canvas_height);
+        container.appendChild(renderer.domElement);
+        scene = new Physijs.Scene({fixedTimeStep: 1 / 120});
+        scene.setGravity(new THREE.Vector3(0, -10, 0));
+        scene.addEventListener(
+            'update',
+            function () {
+                scene.simulate(undefined, 2);
+            }
+        );
+        setCameraControls(canvas_width, canvas_height, renderer);
+        addBackground();
+        createCube(0, 2, -20, 1);
+        createCube(0, 8, -20, 1);
+        navigator.getVRDisplays().then(function (displays) {
+            if (displays.length > 0) {
+                vrDisplay = displays[0];
+                // Kick off the render loop.
+                vrDisplay.requestAnimationFrame(animate);
+                scene.simulate();
+            }
+        });
+        window.addEventListener('vrdisplaypresentchange', onVRDisplayPresentChange);
+
+
+
+        //start mapping cursor
+        if (document.getElementById("abs_mapping_stage")) {
+            mapCursor();
+        }
+
+
+    }
+
+
     function animate(timestamp) {
         var delta = Math.min(timestamp - lastRender, 500);
         lastRender = timestamp;
-        for (i in idToLabel) {
-            idToLabel[i].update(idToLabel[i].parent.score);
-        }
 
         controls.update();
         camera.updateMatrixWorld();
@@ -280,13 +327,6 @@
         controls = new THREE.VRControls(camera);
         effect = new THREE.VREffect(renderer);
         effect.setSize(canvas_width , canvas_height);
-    }
-
-    function addMusic() {
-        audioListener = new THREE.AudioListener();
-        camera.add(audioListener);
-        playList = new THREE.Audio(audioListener);
-        scene.add(playList);
     }
 
 
@@ -311,37 +351,6 @@
 </script>
 
 
-<script>
-    addModal();
-    function addModal() {
-        var modal = document.getElementById('myModal');
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        };
-
-        //When the user clicks anywhere outside of the modal, close it
-        //general function for both modals
-        window.onclick = function (event) {
-            var moreModal = document.getElementById('myModal');
-            var saveModal = document.getElementById('saveModal');
-            if (event.target == moreModal) {
-                moreModal.style.display = "none";
-            } else if (event.target == saveModal) {
-                saveModal.style.display = "none";
-
-            }
-        };
-    }
-
-
-
-
-</script>
 
 <!-- main wrapper -->
 </body>

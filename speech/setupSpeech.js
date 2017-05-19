@@ -4,22 +4,21 @@ var TIMEOUT = 500;
 var waitingForParams = false;
 var saidSetVariable = false;
 var saidGetVariable = false;
-var paramsChosen = [];
 var blockChosen;
 var paused = true;
 var result;
 var parser;
 var str = "";
+var foo = true;
 var candidateParam = ["parameter", "param", "barometer", "input"]
 var candidateSet = [ "set variable", "set barrier", "set terrible", "set durable", "set the", "set bearable"]
 var candidateGet = [ "get variable", "get barrier", "get terrible", "get durable", "get the", "get bearable"]
-var candidatePlay = ["play", "go", "run", "start"]
+var candidatePlay = ["run", "Run", "letsrun"]
 var candidateDirection = ["up", "down", "left", "right", "forward", "backward"];
 var candidateDelete = ["delete", "remove"]
 var candidateNumber = ["one"];
 var candidateColor = ["red", "blue", "green"];
-var candidateBool = ["true", "false"];
-
+var processed;
 
 recognition.continuous = true;
 recognition.interimResults = true;
@@ -42,7 +41,8 @@ recognition.onresult = function(event) {
     //need to write the functions for param here
     var interim = "";
     var final = "";
-    var processed = false;
+    processed = false;
+
     if (typeof(event.results) == 'undefined') {
        console.log("undefined")
     }
@@ -59,22 +59,17 @@ recognition.onresult = function(event) {
         }
     }
 
+    var processedInterim = processNumbers(interim);
+    //first check for variable related functions
+    setValue(processedInterim)
+    getCalledVariable(processedInterim)
+
     //also check if user is hovering over a block in viewer
     if (userSaidParam(interim)) {
         if(Blockly.selected){
             blockChosen = Blockly.selected;
         }
-        //console.log("in param");
-        //showParameterModal(blockChosen);
         waitingForParams = true;
-        processed = true;
-    } else if (userSaidSetVariable(interim)) {
-       // console.log("in set variable");
-        saidSetVariable = true;
-        processed = true;
-    } else if (userSaidGetVariable(interim)) {
-        //console.log("in get variable");
-        saidGetVariable = true;
         processed = true;
     } else if (userSaidPlay(interim)) {
        // console.log("in play");
@@ -86,26 +81,23 @@ recognition.onresult = function(event) {
         }
     } else if (userSaidDelete(interim)){
         //console.log("delete");
-        deleteBlock();
+        //deleteBlock();
     }
 
     //setting parameters.
     if(waitingForParams && blockChosen != null){
-        var processedInterim = processNumbers(interim);
         //get the parameters sequentially.
         if(processedInterim != ""){
             var grammar = grammarInfo[blockChosen.type]
             parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
             console.log(blockChosen.type);
             try {
-                console.log(processedInterim);
                 str = processedInterim;
                 parser.feed(processedInterim);
-                console.log("---------RESULTS--------");
                 var result = parser.results[0];
                 console.log(result);
                 processParamsChosen(result, blockChosen);
-
+                generateSpeech("changed!");
                 //process ended
                 processed = true;
                 waitingForParams = false;
@@ -327,6 +319,7 @@ processNumbers = function(transcript){
             transcript = (transcript.trim()).replace(candidate, num.toString());
         })
     })
+
     return transcript;
 }
 
@@ -386,4 +379,243 @@ function playAudio() {
 function pauseAudio() {
     var audio = document.getElementById("myAudio");
     audio.pause();
+}
+
+/*
+ * Requires the user to first use gesture
+ * "equals [3]", "is [3]"
+ */
+function setValue(processedInterim){
+    var grammar = variableGrammar ["set_value"]
+    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
+    try {
+        console.log(processedInterim)
+        str = processedInterim;
+        parser.feed(processedInterim);
+        var result = parser.results;
+        console.log("set value")
+        console.log(result);
+        var value = processResult(result[0])[1]
+        console.log("value: "+value)
+        //assignValueToVariable(result);
+        if(foo){
+            initializeToNumber(value, Blockly.selected)
+            foo = false;
+        }
+
+        //process ended
+        processed = true;
+    } catch(parseError) {
+        console.log(
+            "Error at character " + parseError.offset
+        ); // "Error at character 2"
+    }
+}
+
+
+/*
+ * Requires the user to first use gesture
+ * "[y] equals [3]"
+ */
+function initializeVariableWithSpeech(processedInterim){
+    var grammar = variableGrammar ["initialize_with_speech"]
+    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
+    try {
+        console.log(processedInterim)
+        str = processedInterim;
+        parser.feed(processedInterim);
+        var result = parser.results[0];
+        console.log("initialize")
+        console.log(result);
+        //assignValueToVariable(result);
+
+    } catch(parseError) {
+        console.log(
+            "Error at character " + parseError.offset
+        ); // "Error at character 2"
+    }
+}
+
+/*
+* Requires the user to first use gesture
+* "variable [y]"
+*/
+function createNewVariable(processedInterim){
+    var grammar = variableGrammar ["create_variable"]
+    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
+    try {
+        console.log(processedInterim)
+        str = processedInterim;
+        parser.feed(processedInterim);
+        var result = parser.results[0];
+        console.log("create neew")
+        console.log(result);
+        //var name = extractVarName(result);
+        //assignValueToVariable(name);
+
+    } catch(parseError) {
+        console.log(
+            "Error at character " + parseError.offset
+        ); // "Error at character 2"
+    }
+}
+
+/*
+ * "get [x]"
+ *
+ */
+function getCalledVariable(processedInterim){
+    var grammar = variableGrammar ["get_variable"]
+    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
+    try {
+        console.log(processedInterim)
+        str = processedInterim;
+        parser.feed(processedInterim);
+        var result = parser.results[0];
+        console.log("get varr")
+        console.log(result);
+        var value = processResult(result)[1]
+        if(Blockly.mainWorkspace.variableList.indexOf(value) > -1){
+            getVariable(value, cursorPosition)
+            //assignValueToVariable(value);
+            processed = true;
+        }
+
+
+    } catch(parseError) {
+        console.log(
+            "Error at character " + parseError.offset
+        ); // "Error at character 2"
+    }
+}
+
+
+
+var grammarInfo = {
+    "move_object_direction": {
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "MAIN", "symbols": ["int", "_", "int", "_", "direction", "_", "int"]},
+            {"name": "MAIN", "symbols": ["int", "int", "_", "direction", "_", "int"]},
+            {"name": "MAIN", "symbols": ["int", "int", "direction", "_", "int"]},
+            {"name": "MAIN", "symbols": ["int", "int", "direction", "int"]},
+            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
+            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+            {"name": "int", "symbols": ["int$ebnf$1"]},
+            {"name": "direction$string$1", "symbols": [{"literal":"u"}, {"literal":"p"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "direction", "symbols": ["direction$string$1"]},
+            {"name": "direction$string$2", "symbols": [{"literal":"d"}, {"literal":"o"}, {"literal":"w"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "direction", "symbols": ["direction$string$2"]},
+            {"name": "direction$string$3", "symbols": [{"literal":"l"}, {"literal":"e"}, {"literal":"f"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "direction", "symbols": ["direction$string$3"]},
+            {"name": "direction$string$4", "symbols": [{"literal":"r"}, {"literal":"i"}, {"literal":"g"}, {"literal":"h"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "direction", "symbols": ["direction$string$4"]},
+            {"name": "direction$string$5", "symbols": [{"literal":"f"}, {"literal":"o"}, {"literal":"r"}, {"literal":"w"}, {"literal":"a"}, {"literal":"r"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "direction", "symbols": ["direction$string$5"]},
+            {"name": "direction$string$6", "symbols": [{"literal":"b"}, {"literal":"a"}, {"literal":"c"}, {"literal":"k"}, {"literal":"w"}, {"literal":"a"}, {"literal":"r"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "direction", "symbols": ["direction$string$6"]},
+            {"name": "_", "symbols": [{"literal":" "}]}
+        ]
+        , ParserStart: "MAIN"
+    }
+    ,
+    "set_color": {
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "Main", "symbols": ["ID", "_", "COLOR"]},
+            {"name": "ID", "symbols": ["int"]},
+            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
+            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+            {"name": "int", "symbols": ["int$ebnf$1"]},
+            {"name": "COLOR$string$1", "symbols": [{"literal":"r"}, {"literal":"e"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "COLOR", "symbols": ["COLOR$string$1"]},
+            {"name": "COLOR$string$2", "symbols": [{"literal":"b"}, {"literal":"l"}, {"literal":"u"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "COLOR", "symbols": ["COLOR$string$2"]},
+            {"name": "COLOR$string$3", "symbols": [{"literal":"g"}, {"literal":"r"}, {"literal":"e"}, {"literal":"e"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "COLOR", "symbols": ["COLOR$string$3"]},
+            {"name": "COLOR$string$4", "symbols": [{"literal":"y"}, {"literal":"e"}, {"literal":"l"}, {"literal":"l"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "COLOR", "symbols": ["COLOR$string$4"]},
+            {"name": "_", "symbols": [{"literal":" "}]}
+        ]
+        , ParserStart: "Main"
+    },
+    "logic_boolean": {
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "Main", "symbols": ["BOOL"]},
+            {"name": "BOOL$string$1", "symbols": [{"literal":"t"}, {"literal":"r"}, {"literal":"u"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "BOOL", "symbols": ["BOOL$string$1"]},
+            {"name": "BOOL$string$2", "symbols": [{"literal":"f"}, {"literal":"a"}, {"literal":"l"}, {"literal":"s"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
+            {"name": "BOOL", "symbols": ["BOOL$string$2"]}
+        ]
+        , ParserStart: "Main"
+    },
+    "controls_repeat_ext": {
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "Main", "symbols": ["int"]},
+            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
+            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+            {"name": "int", "symbols": ["int$ebnf$1"]}
+        ]
+        , ParserStart: "Main"
+    },
+    "controls_for":{
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "Main", "symbols": ["int", "_", "int", "_", "int"]},
+            {"name": "Main", "symbols": ["int", "int", "int"]},
+            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
+            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+            {"name": "int", "symbols": ["int$ebnf$1"]},
+            {"name": "_", "symbols": [{"literal":" "}]}
+        ]
+        , ParserStart: "Main"
+    },
+    "math_number": {
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "Main", "symbols": ["int"]},
+            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
+            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+            {"name": "int", "symbols": ["int$ebnf$1"]}
+        ]
+        , ParserStart: "Main"
+    },
+    "math_arithmetic": {
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "Main", "symbols": ["int", "_", "int"]},
+            {"name": "Main", "symbols": ["int", "int"]},
+            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
+            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+            {"name": "int", "symbols": ["int$ebnf$1"]},
+            {"name": "_", "symbols": [{"literal":" "}]}
+        ]
+        , ParserStart: "Main"
+    }
+    ,
+    "math_single": {
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "Main", "symbols": ["int"]},
+            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
+            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+            {"name": "int", "symbols": ["int$ebnf$1"]}
+        ]
+        , ParserStart: "Main"
+    },
+    "math_random_int":{
+        Lexer: undefined,
+        ParserRules: [
+            {"name": "Main", "symbols": ["int", "_", "int"]},
+            {"name": "Main", "symbols": ["int", "int"]},
+            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
+            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+            {"name": "int", "symbols": ["int$ebnf$1"]},
+            {"name": "_", "symbols": [{"literal":" "}]}
+        ]
+        , ParserStart: "Main"
+    }
+
 }

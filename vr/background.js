@@ -44,7 +44,7 @@ function addBackground(){
 
 
     var loader = new THREE.TextureLoader();
-    var groundTexture = loader.load( '../images/grasslight-big.jpg' );
+    var groundTexture = loader.load( '/images/grasslight-big.jpg' );
     groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
     groundTexture.repeat.set( 25, 25 );
     groundTexture.anisotropy = 16;
@@ -59,14 +59,6 @@ function addBackground(){
 }
 
 
-
-function onProgress(progress) {
-    // Use this to track loading progress
-}
-
-function onError(error) {
-    // Called when errors occur during loading
-}
 
 function createSliderConstraint(mesh, ground, position) {
     var constraint = new Physijs.DOFConstraint(

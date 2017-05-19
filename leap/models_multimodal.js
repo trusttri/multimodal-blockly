@@ -163,8 +163,9 @@
 		
 		var candidate = this.currentBlock.getClosestConnection();
 		if(candidate != null){
-			generateSpeech("great");
+
 			candidate[0].connect(candidate[1]);
+            generateSpeech("great");
 		}
 	}
 
@@ -257,5 +258,24 @@
 		this.blocks = [];
 		
 	}
+
+
+    Control.prototype.highlightCon = function(){
+
+        //Blockly.selected && Blockly.highlightedConnection_ && a != Blockly.DELETE_AREA_TOOLBOX ? (Blockly.localConnection_.connect(Blockly.highlightedConnection_),
+        if(this.currentBlock.blockSvg!=null && Blockly.highlightedConnection_!=null){
+            Blockly.localConnection_.connect(Blockly.highlightedConnection_);
+            if(Blockly.localConnection_.isSuperior()){
+                Blockly.highlightedConnection_.getSourceBlock().connectionUiEffect();
+            }else{
+                Blockly.localConnection_.getSourceBlock().connectionUiEffect();
+            }
+        }
+        if(Blockly.highlightedConnection_ !=null){
+            Blockly.highlightedConnection_.unhighlight();
+            Blockly.highlightedConnection_ = null;
+        }
+
+    }
 
 
