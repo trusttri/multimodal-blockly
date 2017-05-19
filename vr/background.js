@@ -10,12 +10,12 @@ function createMaterial( path ) {
 
 function addBackground(){
     var materials = [
-        createMaterial( '/images/skyX55+x.png' ), // right
-        createMaterial( '/images/skyX55-x.png' ), // left
-        createMaterial( '/images/skyX55+y.png' ), // top
-        createMaterial( '/images/skyX55-y.png' ), // bottom
-        createMaterial( '/images/skyX55+z.png' ), // back
-        createMaterial( '/images/skyX55-z.png' )  // front
+        createMaterial( '/media/vr_images/skyX55+x.png' ), // right
+        createMaterial( '/media/vr_images/skyX55-x.png' ), // left
+        createMaterial( '/media/vr_images/skyX55+y.png' ), // top
+        createMaterial( '/media/vr_images/skyX55-y.png' ), // bottom
+        createMaterial( '/media/vr_images/skyX55+z.png' ), // back
+        createMaterial( '/media/vr_images/skyX55-z.png' )  // front
     ];
     console.log("hoooo");
     // Create a large cube
@@ -44,7 +44,7 @@ function addBackground(){
 
 
     var loader = new THREE.TextureLoader();
-    var groundTexture = loader.load( '/images/grasslight-big.jpg' );
+    var groundTexture = loader.load( '/media/vr_images/grasslight-big.jpg' );
     groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
     groundTexture.repeat.set( 25, 25 );
     groundTexture.anisotropy = 16;

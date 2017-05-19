@@ -63,10 +63,8 @@
         this.candidateBlock = null;
         var shortestDistance = 1000;
         var closestBlock = null;
-        if(BLOCK_SELECTED_FOR_MOVE!=null && cursorPosition[2] > 80){
-
+        if(BLOCK_SELECTED_FOR_MOVE!=null){
             BLOCK_SELECTED_FOR_MOVE.unselectForOtherMove()
-
         }
         if(!Blockly.mainWorkspace.toolbox_.flyout_.isVisible()){//flyout should be closed
             this.blocks.forEach(function(block){
@@ -156,7 +154,7 @@
 		if(Blockly.selected){
 			Blockly.selected.unselect();
 		}
-		
+
 	}
 
 	Control.prototype.listenForConnection = function(){
@@ -165,7 +163,6 @@
 		if(candidate != null){
 
 			candidate[0].connect(candidate[1]);
-            generateSpeech("great");
 		}
 	}
 
@@ -279,3 +276,14 @@
     }
 
 
+    Control.prototype.deleteBlock = function(){
+        if(this.candidateBlock){
+            var idx = this.blocks.indexOf(this.candidateBlock)
+            if(idx > -1){
+                this.candidateBlock.blockSvg.dispose(false, true);
+                this.blocks.splice(idx,1)
+                BLOCK_SELECTED_FOR_MOVE = null;
+            }
+            console.log("deleted")
+        }
+    }

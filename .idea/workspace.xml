@@ -2,658 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55ca4b4-5dd4-4523-b164-857b4262ff51" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/speech/variableGrammar.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/box.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/grasslight-big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/rocks.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skyX55+x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skyX55+y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skyX55+z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skyX55-x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skyX55-y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skyX55-z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/Physijs/physi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/droid/NOTICE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/droid/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/droid/droid_sans_bold.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/droid/droid_sans_mono_regular.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/droid/droid_sans_regular.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/droid/droid_serif_bold.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/droid/droid_serif_regular.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/gentilis_bold.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/gentilis_regular.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/helvetiker_bold.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/helvetiker_regular.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/optimer_bold.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/fonts/optimer_regular.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/AnimationClipCreator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/BlendCharacter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/BlendCharacterGui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/BufferGeometryUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Car.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Cloth.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/CurveExtras.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Detector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Encodings.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/GPUParticleSystem.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Gyroscope.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Half.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/ImprovedNoise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/MD2Character.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/MD2CharacterComplex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/MarchingCubes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Mirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/MorphAnimMesh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/MorphAnimation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Ocean.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Octree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/PRNG.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/ParametricGeometries.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/RollerCoaster.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/ShaderGodRays.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/ShaderSkin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/ShaderTerrain.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/ShaderToon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/SimplexNoise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/SimulationRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/SkyShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/TimelinerController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/TypedArrayUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/UCSCharacter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/Volume.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/VolumeSlice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/WaterShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/WebVR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/animation/CCDIKSolver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/animation/MMDPhysics.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/cameras/CinematicCamera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/cameras/CombinedCamera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/DeviceOrientationControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/DragControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/EditorControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/FirstPersonControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/FlyControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/MouseControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/OrbitControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/OrthographicTrackballControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/PointerLockControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/TrackballControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/TransformControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/controls/VRControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/crossfade/gui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/crossfade/scenes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/crossfade/transition.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/curves/NURBSCurve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/curves/NURBSSurface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/curves/NURBSUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/effects/AnaglyphEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/effects/AsciiEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/effects/ParallaxBarrierEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/effects/PeppersGhostEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/effects/StereoEffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/effects/VREffect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/exporters/OBJExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/exporters/STLBinaryExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/exporters/STLExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/exporters/TypedGeometryExporter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/geometries/ConvexGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/geometries/DecalGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/geometries/TeapotBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/geometries/hilbert2D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/geometries/hilbert3D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/ammo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/charsetencoder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/dat.gui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/earcut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/inflate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/jszip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/msgpack-js.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/photons.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/pnltri.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/stats.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/system.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/timeliner_gui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/tween.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/zlib_and_gzip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/libs/zlib_and_gzip.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/3MFLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/AMFLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/AWDLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/AssimpJSONLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/BabylonLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/BinaryLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ColladaLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ColladaLoader2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/DDSLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/FBXLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/HDRCubeTextureLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/KMZLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/MD2Loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/MMDLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/MTLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/NRRDLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/OBJLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/PCDLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/PDBLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/PLYLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/PVRLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/PlayCanvasLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/RGBELoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/STLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/SVGLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/TGALoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/UTF8Loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/VRMLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/VTKLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/collada/Animation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/collada/AnimationHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/collada/KeyFrameAnimation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ctm/CTMLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ctm/CTMWorker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ctm/ctm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ctm/license/OpenCTM.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ctm/license/js-lzma.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ctm/license/js-openctm.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/ctm/lzma.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/deprecated/SceneLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/gltf/glTF-parser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/gltf/glTFAnimation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/gltf/glTFLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/gltf/glTFLoaderUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/gltf/glTFShaders.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/gltf/gltfUtilities.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/sea3d/SEA3D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/sea3d/SEA3DDeflate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/sea3d/SEA3DLZMA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/sea3d/SEA3DLegacy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/loaders/sea3d/SEA3DLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/materials/ShadowMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/math/ColorConverter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/math/Lut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/modifiers/BufferSubdivisionModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/modifiers/ExplodeModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/modifiers/SubdivisionModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/modifiers/TessellateModifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/BuilderNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/ConstNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/FunctionCallNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/FunctionNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/GLNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/InputNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/NodeLib.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/NodeMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/RawNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/TempNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/accessors/CameraNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/accessors/ColorsNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/accessors/LightNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/accessors/NormalNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/accessors/PositionNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/accessors/ReflectNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/accessors/ScreenUVNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/accessors/UVNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/ColorNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/CubeTextureNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/FloatNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/IntNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/ScreenNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/TextureNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/Vector2Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/Vector3Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/inputs/Vector4Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/materials/PhongNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/materials/PhongNodeMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/materials/StandardNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/materials/StandardNodeMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/math/Math1Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/math/Math2Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/math/Math3Node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/math/OperatorNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/postprocessing/NodePass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/ColorAdjustmentNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/JoinNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/LuminanceNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/NoiseNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/NormalMapNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/ResolutionNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/RoughnessToBlinnExponentNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/SwitchNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/TimerNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/nodes/utils/VelocityNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/objects/ShadowMesh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/pmrem/PMREMCubeUVPacker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/pmrem/PMREMGenerator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/AdaptiveToneMappingPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/BloomPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/BokehPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/ClearPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/DotScreenPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/EffectComposer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/FilmPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/GlitchPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/ManualMSAARenderPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/MaskPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/RenderPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/SMAAPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/SavePass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/ShaderPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/TAARenderPass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/postprocessing/TexturePass.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/CSS2DRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/CSS3DRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/CSS3DStereoRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/CanvasRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/Projector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/RaytracingRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/RaytracingWorker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/SVGRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/renderers/SoftwareRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/BasicShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/BleachBypassShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/BlendShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/BokehShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/BokehShader2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/BrightnessContrastShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/ColorCorrectionShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/ColorifyShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/CompositeShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/ConvolutionShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/CopyShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/DOFMipMapShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/DigitalGlitch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/DotScreenShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/EdgeShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/EdgeShader2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/FXAAShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/FilmShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/FocusShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/FresnelShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/GammaCorrectionShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/HorizontalBlurShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/HorizontalTiltShiftShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/HueSaturationShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/KaleidoShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/LuminosityShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/MirrorShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/NormalMapShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/NormalShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/OceanShaders.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/ParallaxShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/RGBShiftShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/SMAAShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/SSAOShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/SepiaShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/TechnicolorShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/ToneMapShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/TriangleBlurShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/UnpackDepthRGBAShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/VerticalBlurShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/VerticalTiltShiftShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/shaders/VignetteShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/utils/GeometryUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/utils/ImageUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/utils/ShadowMapViewer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/examples/js/utils/UVsDebug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/Three.Legacy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/Three.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/AnimationClip.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/AnimationMixer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/AnimationObjectGroup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/AnimationUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/KeyframeTrack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/PropertyBinding.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/PropertyMixer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/tracks/BooleanKeyframeTrack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/tracks/ColorKeyframeTrack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/tracks/NumberKeyframeTrack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/tracks/QuaternionKeyframeTrack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/tracks/StringKeyframeTrack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/animation/tracks/VectorKeyframeTrack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/audio/Audio.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/audio/AudioAnalyser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/audio/AudioContext.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/audio/AudioListener.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/audio/PositionalAudio.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/cameras/Camera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/cameras/CubeCamera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/cameras/OrthographicCamera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/cameras/PerspectiveCamera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/cameras/StereoCamera.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/BufferAttribute.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/BufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/Clock.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/DirectGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/EventDispatcher.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/Face3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/Geometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/InstancedBufferAttribute.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/InstancedBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/InstancedInterleavedBuffer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/InterleavedBuffer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/InterleavedBufferAttribute.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/Layers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/Object3D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/Raycaster.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/core/Uniform.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/CurveUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/SceneUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/ShapeUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/core/Curve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/core/CurvePath.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/core/Font.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/core/Path.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/core/Shape.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/ArcCurve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/CatmullRomCurve3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/ClosedSplineCurve3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/CubicBezierCurve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/CubicBezierCurve3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/EllipseCurve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/LineCurve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/LineCurve3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/QuadraticBezierCurve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/QuadraticBezierCurve3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/SplineCurve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/curves/SplineCurve3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/BoxBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/BoxGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/CircleBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/CircleGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/CylinderBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/CylinderGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/DodecahedronGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/EdgesGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/ExtrudeGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/IcosahedronGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/LatheBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/LatheGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/OctahedronGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/ParametricGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/PlaneBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/PlaneGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/PolyhedronGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/RingBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/RingGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/ShapeGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/SphereBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/SphereGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/TetrahedronGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/TextGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/TorusBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/TorusGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/TorusKnotBufferGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/TorusKnotGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/TubeGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/geometries/WireframeGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/ArrowHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/AxisHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/BoundingBoxHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/BoxHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/CameraHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/DirectionalLightHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/EdgesHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/FaceNormalsHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/GridHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/HemisphereLightHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/PointLightHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/SkeletonHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/SpotLightHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/VertexNormalsHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/helpers/WireframeHelper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/objects/ImmediateRenderObject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/extras/objects/MorphBlendMesh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/AmbientLight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/DirectionalLight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/DirectionalLightShadow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/HemisphereLight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/Light.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/LightShadow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/PointLight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/SpotLight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/lights/SpotLightShadow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/AnimationLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/AudioLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/BinaryTextureLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/BufferGeometryLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/Cache.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/CompressedTextureLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/CubeTextureLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/FontLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/ImageLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/JSONLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/Loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/LoadingManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/MaterialLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/OBJLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/ObjectLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/TextureLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/loaders/XHRLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/LineBasicMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/LineDashedMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/Material.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/MeshBasicMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/MeshDepthMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/MeshLambertMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/MeshNormalMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/MeshPhongMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/MeshPhysicalMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/MeshStandardMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/MultiMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/PointsMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/RawShaderMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/ShaderMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/materials/SpriteMaterial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Box2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Box3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Color.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Euler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Frustum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Interpolant.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Line3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Math.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Matrix3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Matrix4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Plane.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Quaternion.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Ray.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Sphere.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Spherical.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Spline.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Triangle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Vector2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Vector3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/Vector4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/interpolants/CubicInterpolant.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/interpolants/DiscreteInterpolant.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/interpolants/LinearInterpolant.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/math/interpolants/QuaternionLinearInterpolant.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/Bone.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/Group.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/LOD.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/LensFlare.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/Line.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/LineSegments.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/Mesh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/Points.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/Skeleton.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/SkinnedMesh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/objects/Sprite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/WebGLRenderTarget.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/WebGLRenderTargetCube.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/WebGLRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/alphamap_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/alphamap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/alphatest_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/ambient_pars.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/aomap_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/aomap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/begin_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/beginnormal_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/bsdfs.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/bumpmap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/clipping_planes_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/clipping_planes_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/clipping_planes_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/clipping_planes_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/color_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/color_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/color_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/color_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/common.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/cube_uv_reflection_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/defaultnormal_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/displacementmap_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/displacementmap_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/emissivemap_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/emissivemap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/encodings_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/encodings_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/envmap_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/envmap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/envmap_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/envmap_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/fog_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/fog_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lightmap_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lightmap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lights_lambert_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lights_pars.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lights_phong_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lights_phong_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lights_physical_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lights_physical_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/lights_template.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/logdepthbuf_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/logdepthbuf_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/logdepthbuf_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/logdepthbuf_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/map_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/map_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/map_particle_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/map_particle_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/metalnessmap_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/metalnessmap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/morphnormal_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/morphtarget_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/morphtarget_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/normal_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/normalmap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/packing.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/premultiplied_alpha_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/project_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/roughnessmap_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/roughnessmap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/shadowmap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/shadowmap_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/shadowmap_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/shadowmask_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/skinbase_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/skinning_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/skinning_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/skinnormal_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/specularmap_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/specularmap_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/tonemapping_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/tonemapping_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/uv2_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/uv2_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/uv2_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/uv_pars_fragment.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/uv_pars_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/uv_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderChunk/worldpos_vertex.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/cube_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/cube_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/depth_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/depth_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/distanceRGBA_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/distanceRGBA_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/equirect_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/equirect_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/linedashed_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/linedashed_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/meshbasic_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/meshbasic_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/meshlambert_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/meshlambert_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/meshphong_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/meshphong_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/meshphysical_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/meshphysical_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/normal_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/normal_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/points_frag.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/ShaderLib/points_vert.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/UniformsLib.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/shaders/UniformsUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLBufferRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLCapabilities.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLExtensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLGeometries.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLIndexedBufferRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLLights.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLObjects.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLProgram.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLPrograms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLProperties.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLShader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLShadowMap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLState.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/WebGLUniforms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/plugins/LensFlarePlugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/renderers/webgl/plugins/SpritePlugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/scenes/Fog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/scenes/FogExp2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/scenes/Scene.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/textures/CanvasTexture.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/textures/CompressedTexture.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/textures/CubeTexture.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/textures/DataTexture.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/textures/DepthTexture.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/textures/Texture.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/src/textures/VideoTexture.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/three.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/node_modules/three/three.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/polyfill/webvr-polyfill.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/tween.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/leap/pscp.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/leap/putty.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/FlyControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/MTLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/OBJLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/OBJMTLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/OrbitControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/three-light-tut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/three-reflection-tut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/three-scene-tut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/three-texture-tut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/three-tut.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/obj_js/three.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/speech/colorGrammar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/speech/modal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheet/modal-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/label.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vr/Thumbs.db" afterPath="$PROJECT_DIR$/vr/Thumbs.db" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leap/control_leap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leap/models_multimodal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/speech/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/box.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/grasslight-big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/rocks.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55+x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55+y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55+z.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55-x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55-z.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/core/css.js" afterPath="$PROJECT_DIR$/blockly/core/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blockly/generators/javascript/vr.js" afterPath="$PROJECT_DIR$/blockly/generators/javascript/vr.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code.js" afterPath="$PROJECT_DIR$/code.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leap/block.js" afterPath="$PROJECT_DIR$/leap/block.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leap/control_leap.js" afterPath="$PROJECT_DIR$/leap/control_leap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leap/models_multimodal.js" afterPath="$PROJECT_DIR$/leap/models_multimodal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech/parameterGrammar.js" afterPath="$PROJECT_DIR$/speech/parameterGrammar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech/setupSpeech.js" afterPath="$PROJECT_DIR$/speech/setupSpeech.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech/variable.js" afterPath="$PROJECT_DIR$/speech/variable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheet/style.css" afterPath="$PROJECT_DIR$/stylesheet/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech/variableGrammar.js" afterPath="$PROJECT_DIR$/speech/variableGrammar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vr/background.js" afterPath="$PROJECT_DIR$/vr/background.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -669,103 +37,101 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4328">
-              <caret line="226" column="0" lean-forward="true" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/MultimodalBlockly/blockly/appengine/storage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="code.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="481" column="10" lean-forward="false" selection-start-line="481" selection-start-column="2" selection-end-line="481" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setupSpeech.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/speech/setupSpeech.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="block_functions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vr/block_functions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="304" column="0" lean-forward="true" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models_multimodal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leap/models_multimodal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3558">
-              <caret line="258" column="8" lean-forward="true" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vr/background.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="control_leap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leap/control_leap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="leap.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leap/leap.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="block.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leap/block.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5940">
-              <caret line="270" column="14" lean-forward="false" selection-start-line="270" selection-start-column="14" selection-end-line="270" selection-end-column="14" />
+            <state relative-caret-position="-972">
+              <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="en.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blockly/msg/js/en.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leap_main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leap/leap_main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-849">
+              <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leap-plugins.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leap/leap-plugins.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="19" column="1965" lean-forward="false" selection-start-line="19" selection-start-column="1965" selection-end-line="19" selection-end-column="1965" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setupSpeech.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech/setupSpeech.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="code.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8883">
+              <caret line="563" column="5" lean-forward="true" selection-start-line="563" selection-start-column="5" selection-end-line="563" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameterDictionary.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech/parameterDictionary.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="variableGrammar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech/variableGrammar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-132">
+              <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameterGrammar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech/parameterGrammar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -783,36 +149,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>variable</find>
-      <find>setv</find>
-      <find>getCall</find>
-      <find>grammarInfo</find>
+      <find>mouse</find>
+      <find>new Blpush</find>
+      <find>generateSp</find>
+      <find>control.</find>
+      <find>speech</find>
+      <find>initializeTo</find>
+      <find>isconn</find>
+      <find>init</find>
+      <find>initi</find>
+      <find>extractVarname</find>
+      <find>createNew</find>
+      <find>get</find>
       <find>initialize</find>
-      <find>play</find>
-      <find>Code.js</find>
-      <find>proc</find>
-      <find>initial</find>
-      <find>param</find>
-      <find>generate</find>
-      <find>stop</find>
-      <find>setva</find>
-      <find>equals</find>
-      <find>connect</find>
-      <find>processed</find>
-      <find>create</find>
-      <find>not</find>
-      <find>run</find>
-      <find>font</find>
-      <find>storage</find>
+      <find>candidateNumber</find>
+      <find>usersaidnumber</find>
+      <find>candidateDirec</find>
+      <find>usersaiddir</find>
+      <find>usersaiddire</find>
+      <find>candidateset</find>
+      <find>usersai</find>
+      <find>usersaidset</find>
+      <find>initialize_</find>
+      <find>process</find>
+      <find>processInter</find>
+      <find>get ID</find>
       <find>modal</find>
-      <find>myModal</find>
-      <find>js</find>
-      <find>addvr</find>
-      <find>vr</find>
-      <find>adjustin</find>
-      <find>label</find>
-      <find>images</find>
-      <find>initiali</find>
+      <find>grammarInfo</find>
+      <find>parameterGrammar</find>
+      <find>playaudio</find>
+      <find>msg/js/</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -827,20 +193,23 @@
         <option value="$PROJECT_DIR$/speech/colorGrammar.js" />
         <option value="$PROJECT_DIR$/speech/modal.js" />
         <option value="$PROJECT_DIR$/speech/parameterDictionary.js" />
-        <option value="$PROJECT_DIR$/speech/variable.js" />
         <option value="$PROJECT_DIR$/blockly/core/css.js" />
         <option value="$PROJECT_DIR$/blockly/blockly_uncompressed.js" />
         <option value="$USER_HOME$/Desktop/grammar.js" />
-        <option value="$PROJECT_DIR$/speech/variableGrammar.js" />
         <option value="$PROJECT_DIR$/blockly/generators/javascript/vr.js" />
         <option value="$PROJECT_DIR$/stylesheet/style.css" />
-        <option value="$PROJECT_DIR$/code.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/leap/block.js" />
         <option value="$PROJECT_DIR$/leap/models_multimodal.js" />
         <option value="$PROJECT_DIR$/leap/control_leap.js" />
         <option value="$PROJECT_DIR$/vr/background.js" />
+        <option value="$PROJECT_DIR$/leap/leap_main.js" />
+        <option value="$PROJECT_DIR$/speech/variable.js" />
+        <option value="$PROJECT_DIR$/leap/block.js" />
+        <option value="$PROJECT_DIR$/speech/variableGrammar.js" />
+        <option value="$PROJECT_DIR$/leap/control.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/speech/parameterGrammar.js" />
         <option value="$PROJECT_DIR$/speech/setupSpeech.js" />
+        <option value="$PROJECT_DIR$/code.js" />
       </list>
     </option>
   </component>
@@ -849,6 +218,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/vr/lib/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
@@ -871,7 +243,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -894,18 +266,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="speech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="leap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="msg" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/grammar.js" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -1004,20 +436,23 @@
       <workItem from="1495074167912" duration="11290000" />
       <workItem from="1495107464648" duration="5959000" />
       <workItem from="1495148205272" duration="1680000" />
-      <workItem from="1495161843976" duration="2898000" />
+      <workItem from="1495161843976" duration="3378000" />
+      <workItem from="1495167320067" duration="4614000" />
+      <workItem from="1495190019963" duration="2008000" />
+      <workItem from="1495192623217" duration="1749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35542000" />
+    <option name="totallyTimeSpent" value="44393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18645833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.228125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1032,6 +467,24 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.228125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1046,37 +499,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blockly/core/flyout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15372">
-          <caret line="732" column="33" lean-forward="false" selection-start-line="732" selection-start-column="26" selection-end-line="732" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/variable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/setupSpeech.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7875">
-          <caret line="375" column="5" lean-forward="true" selection-start-line="375" selection-start-column="5" selection-end-line="375" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vr/block_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leap/block.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="903">
@@ -1085,14 +507,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leap/control_leap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="160" column="68" lean-forward="false" selection-start-line="160" selection-start-column="61" selection-end-line="160" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/leap/control_leap.js" />
     <entry file="file://$PROJECT_DIR$/code/index.html" />
     <entry file="file://$PROJECT_DIR$/blockly/msg/en.js" />
     <entry file="file://$PROJECT_DIR$/blockly/msg/messages.js">
@@ -1106,14 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="435" column="26" lean-forward="false" selection-start-line="435" selection-start-column="14" selection-end-line="435" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/msg/js/en.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,14 +548,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speech/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/modal.js" />
     <entry file="file://$PROJECT_DIR$/blockly/core/inject.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1260">
@@ -1158,29 +558,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/speech/colorGrammar.js" />
     <entry file="file://$PROJECT_DIR$/speech/grammar.js" />
-    <entry file="file://$PROJECT_DIR$/speech/parameterDictionary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="137" column="7" lean-forward="false" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/nearley.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/core/field_colour.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1202,35 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/core/block_svg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26586">
-          <caret line="1284" column="7" lean-forward="false" selection-start-line="1284" selection-start-column="7" selection-end-line="1284" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/core/block.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12978">
-          <caret line="636" column="36" lean-forward="false" selection-start-line="636" selection-start-column="36" selection-end-line="636" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockly/core/block_render_svg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6468">
-          <caret line="326" column="41" lean-forward="false" selection-start-line="326" selection-start-column="41" selection-end-line="326" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/variable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1743">
-          <caret line="83" column="1" lean-forward="false" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/core/css.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -1246,36 +594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speech/parameterGrammar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="5" column="69" lean-forward="false" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/grammar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/variableGrammar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/blocks/vr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,25 +605,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
           <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icons.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/icon.png" />
+    <entry file="file://$PROJECT_DIR$/icons.png" />
     <entry file="file://$PROJECT_DIR$/stylesheet/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,80 +621,170 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leap/control_leap.js" />
+    <entry file="file://$PROJECT_DIR$/leap/leap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leap/models_multimodal.js" />
+    <entry file="file://$PROJECT_DIR$/vr/block_functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6384">
+          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/nearley.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/config.js" />
+    <entry file="file://$PROJECT_DIR$/vr/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/core/block_drag_surface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2415">
+          <caret line="133" column="5" lean-forward="false" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/core/block_render_svg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8400">
+          <caret line="418" column="46" lean-forward="false" selection-start-line="418" selection-start-column="46" selection-end-line="418" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/core/block_svg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25662">
+          <caret line="1240" column="18" lean-forward="false" selection-start-line="1240" selection-start-column="18" selection-end-line="1240" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code.js">
+    <entry file="file://$PROJECT_DIR$/blockly/core/block.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="481" column="10" lean-forward="false" selection-start-line="481" selection-start-column="2" selection-end-line="481" selection-end-column="10" />
+        <state relative-caret-position="26817">
+          <caret line="1295" column="2" lean-forward="false" selection-start-line="1295" selection-start-column="2" selection-end-line="1295" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$USER_HOME$/Desktop/grammar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4328">
-          <caret line="226" column="0" lean-forward="true" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+        <state relative-caret-position="21">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/variable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4158">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leap/control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5487">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leap/leap_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-849">
+          <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leap/leap-plugins.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="19" column="1965" lean-forward="false" selection-start-line="19" selection-start-column="1965" selection-end-line="19" selection-end-column="1965" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leap/block.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5940">
-          <caret line="270" column="14" lean-forward="false" selection-start-line="270" selection-start-column="14" selection-end-line="270" selection-end-column="14" />
+        <state relative-caret-position="-972">
+          <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leap/control_leap.js">
+    <entry file="file://$PROJECT_DIR$/speech/variableGrammar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="-132">
+          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leap/leap.min.js">
+    <entry file="file://$PROJECT_DIR$/speech/parameterDictionary.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leap/models_multimodal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3558">
-          <caret line="258" column="8" lean-forward="true" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
+        <state relative-caret-position="96">
+          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vr/background.js">
+    <entry file="file://$PROJECT_DIR$/speech/parameterGrammar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vr/block_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="304" column="0" lean-forward="true" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
+        <state relative-caret-position="21">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/speech/setupSpeech.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state relative-caret-position="147">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockly/msg/js/en.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8883">
+          <caret line="563" column="5" lean-forward="true" selection-start-line="563" selection-start-column="5" selection-end-line="563" selection-end-column="5" />
           <folding />
         </state>
       </provider>

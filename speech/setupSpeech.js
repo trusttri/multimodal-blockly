@@ -2,22 +2,15 @@
 var recognition = new webkitSpeechRecognition();
 var TIMEOUT = 500;
 var waitingForParams = false;
-var saidSetVariable = false;
-var saidGetVariable = false;
 var blockChosen;
 var paused = true;
 var result;
 var parser;
 var str = "";
-var foo = true;
-var candidateParam = ["parameter", "param", "barometer", "input"]
-var candidateSet = [ "set variable", "set barrier", "set terrible", "set durable", "set the", "set bearable"]
-var candidateGet = [ "get variable", "get barrier", "get terrible", "get durable", "get the", "get bearable"]
-var candidatePlay = ["run", "Run", "letsrun"]
-var candidateDirection = ["up", "down", "left", "right", "forward", "backward"];
-var candidateDelete = ["delete", "remove"]
-var candidateNumber = ["one"];
-var candidateColor = ["red", "blue", "green"];
+var candidateParam = ["parameter", "param", "barometer", "input"];
+var candidatePlay = ["run", "Run", "letsrun"];
+var candidateDelete = ["delete", "remove"];
+var candidateStop = ["stop"];
 var processed;
 
 recognition.continuous = true;
@@ -59,10 +52,12 @@ recognition.onresult = function(event) {
         }
     }
 
-    var processedInterim = processNumbers(interim);
+    var processedInterim = processInterim(interim);
+
     //first check for variable related functions
     setValue(processedInterim)
     getCalledVariable(processedInterim)
+    createNewVariable(processedInterim)
 
     //also check if user is hovering over a block in viewer
     if (userSaidParam(interim)) {
@@ -71,8 +66,7 @@ recognition.onresult = function(event) {
         }
         waitingForParams = true;
         processed = true;
-    } else if (userSaidPlay(interim)) {
-       // console.log("in play");
+    } else if (userSaidRun(interim)) {
         if(control.blocks.length > 0){
             Code.runJS();
             generateSpeech("play!");
@@ -80,15 +74,19 @@ recognition.onresult = function(event) {
             processed = true;
         }
     } else if (userSaidDelete(interim)){
-        //console.log("delete");
-        //deleteBlock();
+        control.deleteBlock();
+        processed = true;
+    }else if(userSaidStopAudio(interim)){
+        stopAudio();
+        console.log("stop");
+        processed = true;
     }
 
     //setting parameters.
     if(waitingForParams && blockChosen != null){
         //get the parameters sequentially.
         if(processedInterim != ""){
-            var grammar = grammarInfo[blockChosen.type]
+            var grammar  = parameterGrammar[blockChosen.type]
             parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
             console.log(blockChosen.type);
             try {
@@ -110,22 +108,10 @@ recognition.onresult = function(event) {
 
     }
 
-    //setting variables
-    if(saidSetVariable){
-
-    }
-
-    //get variable
-    if(saidGetVariable){
-
-    }
-
-
 
 
     //if end of process restart
     if(processed){
-        console.log("processed. stop");
         recognition.stop();
         paused = true;
     }
@@ -141,7 +127,7 @@ recognition.onspeechend = function() {
 
 /* helper functions for speech */
 
-userSaid = function(str, commands){
+var userSaid = function(str, commands){
     commands = commands.split(" ");
     //all should be included
     for (var i = 0; i < commands.length; i++) {
@@ -152,7 +138,7 @@ userSaid = function(str, commands){
     return true;
 }
 
-userSaidParam = function(transcript){
+var userSaidParam = function(transcript){
     for (var i=0 ; i<candidateParam.length ; i++){
         var candidate = candidateParam[i];
         if(userSaid(transcript, candidate)){
@@ -162,38 +148,9 @@ userSaidParam = function(transcript){
     return false;
 }
 
-userSaidNumber = function(transcript){
-    for (var i=0 ; i<candidateNumber.length ; i++){
-        var candidate = candidateNumber[i];
-        if(userSaid(transcript, candidate)){
-            return true
-        }
-    }
-    return false;
-}
 
-userSaidSetVariable = function(transcript){
 
-    for (var i=0 ; i<candidateSet.length ; i++){
-        var candidate = candidateSet[i];
-        if(userSaid(transcript, candidate)){
-            return true
-        }
-    }
-    return false;
-}
-
-userSaidGetVariable= function(transcript){
-    for (var i=0 ; i<candidateGet.length ; i++){
-        var candidate = candidateGet[i];
-        if(userSaid(transcript, candidate)){
-            return true
-        }
-    }
-    return false;
-}
-
-userSaidPlay = function(transcript){
+var userSaidRun = function(transcript){
 
     for (var i=0 ; i<candidatePlay.length ; i++){
         var candidate = candidatePlay[i];
@@ -204,24 +161,9 @@ userSaidPlay = function(transcript){
     return false;
 }
 
-// userSaidNumber = function(trancript){
-//     var patt = new RegExp("[0-9]+");
-//     var res = patt.test(transcript);
-//     return res
-// }
-
-userSaidDirection = function(transcript){
-    for(var i=0; i<candidateDirection.length; i++){
-        candidate = candidateDirection[i];
-        if(userSaid(transcript, candidate)){
-            return true
-        }
-    }
-    return false;
-}
 
 
-userSaidDelete = function(transcript){
+var userSaidDelete = function(transcript){
     for(var i=0; i<candidateDelete.length; i++){
         candidate = candidateDelete[i];
         if(userSaid(transcript, candidate)){
@@ -231,19 +173,9 @@ userSaidDelete = function(transcript){
     return false;
 }
 
-userSaidColor = function(transcript){
-    for(var i=0; i<candidateColor.length; i++){
-        candidate = candidateColor[i];
-        if(userSaid(transcript, candidate)){
-            return true
-        }
-    }
-    return false;
-}
-
-userSaidDirection = function(transcript){
-    for(var i=0; i<candidateDirection.length; i++){
-        candidate = candidateDirection[i];
+var userSaidStopAudio = function(transcript){
+    for(var i=0; i<candidateStop.length; i++){
+        candidate = candidateStop[i];
         if(userSaid(transcript, candidate)){
             return true
         }
@@ -252,12 +184,11 @@ userSaidDirection = function(transcript){
 }
 
 
-processParamsChosen = function(parseResult, blockChosen){
+
+var processParamsChosen = function(parseResult, blockChosen){
 
     var parametersInfo = paramInfo;
-    console.log("---------params-----------");
     var paramsChosen = processResult(parseResult);
-    console.log(paramsChosen);
     var blockInfo = parametersInfo[blockChosen.type];
 
     for(var i=0; i<paramsChosen.length; i++){
@@ -282,34 +213,16 @@ processParamsChosen = function(parseResult, blockChosen){
                     paramChosen = "#0000ff";
                 }else if(paramChosen == "green"){
                     paramChosen = "#00ff00";
-                }else if(paramChosen == "yellow") {
-                    paramChosen = "#ffff00";
                 }
 
             }
             blockChosen.setFieldValue(paramChosen , paramName);
         }
     }
-    /*
-     //for setting field
-     //instead of direction put field name
-     Blockly.selected.setFieldValue("down", "direction");
 
-
-     //for numbers
-     Blockly.selected.setFieldValue("3", "NUM")
-
-
-
-     Blockly.selected.childBlocks_[2].setFieldValue(110, "NUM")
-
-     Blockly.selected.setFieldValue("#eeffee","color")
-
-     Blockly.selected.setFieldValue("false","BOOL")
-     */
 }
 
-processNumbers = function(transcript){
+var processInterim = function(transcript){
     var numbers = {0:["zero"], 1:["one", "on"], 2:["to", "two"], 3:["three"], 4:["for", "four"], 5:["five"],
         6:["six"], 7:["seven"], 8:["eight"], 9:["nine"], 10:["ten"]
     };
@@ -320,11 +233,20 @@ processNumbers = function(transcript){
         })
     })
 
+    //process canddiates for variables
+    var variables = {'x':['EX', 'ex', 'Ex'], 'y':['Why', 'why'], 'get x':['jet X']};
+    Object.keys(variables).forEach(function(variable){
+        var candidates = variables[variable];
+        candidates.forEach(function(candidate){
+            transcript = (transcript.trim()).replace(candidate, variable);
+        })
+    })
+
     return transcript;
 }
 
 
-processResult = function(result){
+var processResult = function(result){
     var params = [];
     result.forEach(function(container){
         var splits = container[0];
@@ -354,15 +276,14 @@ recognition.start();
 var voicesReady = false;
 window.speechSynthesis.onvoiceschanged = function() {
     voicesReady = true;
-    // Uncomment to see a list of voices
-    //console.log("Choose a voice:\n" + window.speechSynthesis.getVoices().map(function(v,i) { return i + ": " + v.name; }).join("\n"));
 };
+
 var generateSpeech = function(message, callback) {
     if (voicesReady) {
-        var msg = new SpeechSynthesisUtterance();
-        msg.voice = window.speechSynthesis.getVoices()[2];
-        msg.text = message;
-        msg.rate = 0.2;
+        var message = new SpeechSynthesisUtterance();
+        message.voice = window.speechSynthesis.getVoices()[2];
+        message.text = message;
+        message.rate = 0.2;
         if (typeof callback !== "undefined")
             msg.onend = callback;
         speechSynthesis.speak(msg);
@@ -370,252 +291,17 @@ var generateSpeech = function(message, callback) {
 };
 
 
-
-function playAudio() {
+var playAudio = function() {
     var audio = document.getElementById("myAudio");
     audio.play();
+
 }
 
-function pauseAudio() {
+var stopAudio = function(){
     var audio = document.getElementById("myAudio");
     audio.pause();
 }
 
-/*
- * Requires the user to first use gesture
- * "equals [3]", "is [3]"
- */
-function setValue(processedInterim){
-    var grammar = variableGrammar ["set_value"]
-    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
-    try {
-        console.log(processedInterim)
-        str = processedInterim;
-        parser.feed(processedInterim);
-        var result = parser.results;
-        console.log("set value")
-        console.log(result);
-        var value = processResult(result[0])[1]
-        console.log("value: "+value)
-        //assignValueToVariable(result);
-        if(foo){
-            initializeToNumber(value, Blockly.selected)
-            foo = false;
-        }
-
-        //process ended
-        processed = true;
-    } catch(parseError) {
-        console.log(
-            "Error at character " + parseError.offset
-        ); // "Error at character 2"
-    }
-}
-
-
-/*
- * Requires the user to first use gesture
- * "[y] equals [3]"
- */
-function initializeVariableWithSpeech(processedInterim){
-    var grammar = variableGrammar ["initialize_with_speech"]
-    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
-    try {
-        console.log(processedInterim)
-        str = processedInterim;
-        parser.feed(processedInterim);
-        var result = parser.results[0];
-        console.log("initialize")
-        console.log(result);
-        //assignValueToVariable(result);
-
-    } catch(parseError) {
-        console.log(
-            "Error at character " + parseError.offset
-        ); // "Error at character 2"
-    }
-}
-
-/*
-* Requires the user to first use gesture
-* "variable [y]"
-*/
-function createNewVariable(processedInterim){
-    var grammar = variableGrammar ["create_variable"]
-    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
-    try {
-        console.log(processedInterim)
-        str = processedInterim;
-        parser.feed(processedInterim);
-        var result = parser.results[0];
-        console.log("create neew")
-        console.log(result);
-        //var name = extractVarName(result);
-        //assignValueToVariable(name);
-
-    } catch(parseError) {
-        console.log(
-            "Error at character " + parseError.offset
-        ); // "Error at character 2"
-    }
-}
-
-/*
- * "get [x]"
- *
- */
-function getCalledVariable(processedInterim){
-    var grammar = variableGrammar ["get_variable"]
-    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
-    try {
-        console.log(processedInterim)
-        str = processedInterim;
-        parser.feed(processedInterim);
-        var result = parser.results[0];
-        console.log("get varr")
-        console.log(result);
-        var value = processResult(result)[1]
-        if(Blockly.mainWorkspace.variableList.indexOf(value) > -1){
-            getVariable(value, cursorPosition)
-            //assignValueToVariable(value);
-            processed = true;
-        }
-
-
-    } catch(parseError) {
-        console.log(
-            "Error at character " + parseError.offset
-        ); // "Error at character 2"
-    }
-}
 
 
 
-var grammarInfo = {
-    "move_object_direction": {
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "MAIN", "symbols": ["int", "_", "int", "_", "direction", "_", "int"]},
-            {"name": "MAIN", "symbols": ["int", "int", "_", "direction", "_", "int"]},
-            {"name": "MAIN", "symbols": ["int", "int", "direction", "_", "int"]},
-            {"name": "MAIN", "symbols": ["int", "int", "direction", "int"]},
-            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
-            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "int", "symbols": ["int$ebnf$1"]},
-            {"name": "direction$string$1", "symbols": [{"literal":"u"}, {"literal":"p"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "direction", "symbols": ["direction$string$1"]},
-            {"name": "direction$string$2", "symbols": [{"literal":"d"}, {"literal":"o"}, {"literal":"w"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "direction", "symbols": ["direction$string$2"]},
-            {"name": "direction$string$3", "symbols": [{"literal":"l"}, {"literal":"e"}, {"literal":"f"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "direction", "symbols": ["direction$string$3"]},
-            {"name": "direction$string$4", "symbols": [{"literal":"r"}, {"literal":"i"}, {"literal":"g"}, {"literal":"h"}, {"literal":"t"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "direction", "symbols": ["direction$string$4"]},
-            {"name": "direction$string$5", "symbols": [{"literal":"f"}, {"literal":"o"}, {"literal":"r"}, {"literal":"w"}, {"literal":"a"}, {"literal":"r"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "direction", "symbols": ["direction$string$5"]},
-            {"name": "direction$string$6", "symbols": [{"literal":"b"}, {"literal":"a"}, {"literal":"c"}, {"literal":"k"}, {"literal":"w"}, {"literal":"a"}, {"literal":"r"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "direction", "symbols": ["direction$string$6"]},
-            {"name": "_", "symbols": [{"literal":" "}]}
-        ]
-        , ParserStart: "MAIN"
-    }
-    ,
-    "set_color": {
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main", "symbols": ["ID", "_", "COLOR"]},
-            {"name": "ID", "symbols": ["int"]},
-            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
-            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "int", "symbols": ["int$ebnf$1"]},
-            {"name": "COLOR$string$1", "symbols": [{"literal":"r"}, {"literal":"e"}, {"literal":"d"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "COLOR", "symbols": ["COLOR$string$1"]},
-            {"name": "COLOR$string$2", "symbols": [{"literal":"b"}, {"literal":"l"}, {"literal":"u"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "COLOR", "symbols": ["COLOR$string$2"]},
-            {"name": "COLOR$string$3", "symbols": [{"literal":"g"}, {"literal":"r"}, {"literal":"e"}, {"literal":"e"}, {"literal":"n"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "COLOR", "symbols": ["COLOR$string$3"]},
-            {"name": "COLOR$string$4", "symbols": [{"literal":"y"}, {"literal":"e"}, {"literal":"l"}, {"literal":"l"}, {"literal":"o"}, {"literal":"w"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "COLOR", "symbols": ["COLOR$string$4"]},
-            {"name": "_", "symbols": [{"literal":" "}]}
-        ]
-        , ParserStart: "Main"
-    },
-    "logic_boolean": {
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main", "symbols": ["BOOL"]},
-            {"name": "BOOL$string$1", "symbols": [{"literal":"t"}, {"literal":"r"}, {"literal":"u"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "BOOL", "symbols": ["BOOL$string$1"]},
-            {"name": "BOOL$string$2", "symbols": [{"literal":"f"}, {"literal":"a"}, {"literal":"l"}, {"literal":"s"}, {"literal":"e"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "BOOL", "symbols": ["BOOL$string$2"]}
-        ]
-        , ParserStart: "Main"
-    },
-    "controls_repeat_ext": {
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main", "symbols": ["int"]},
-            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
-            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "int", "symbols": ["int$ebnf$1"]}
-        ]
-        , ParserStart: "Main"
-    },
-    "controls_for":{
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main", "symbols": ["int", "_", "int", "_", "int"]},
-            {"name": "Main", "symbols": ["int", "int", "int"]},
-            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
-            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "int", "symbols": ["int$ebnf$1"]},
-            {"name": "_", "symbols": [{"literal":" "}]}
-        ]
-        , ParserStart: "Main"
-    },
-    "math_number": {
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main", "symbols": ["int"]},
-            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
-            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "int", "symbols": ["int$ebnf$1"]}
-        ]
-        , ParserStart: "Main"
-    },
-    "math_arithmetic": {
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main", "symbols": ["int", "_", "int"]},
-            {"name": "Main", "symbols": ["int", "int"]},
-            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
-            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "int", "symbols": ["int$ebnf$1"]},
-            {"name": "_", "symbols": [{"literal":" "}]}
-        ]
-        , ParserStart: "Main"
-    }
-    ,
-    "math_single": {
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main", "symbols": ["int"]},
-            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
-            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "int", "symbols": ["int$ebnf$1"]}
-        ]
-        , ParserStart: "Main"
-    },
-    "math_random_int":{
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main", "symbols": ["int", "_", "int"]},
-            {"name": "Main", "symbols": ["int", "int"]},
-            {"name": "int$ebnf$1", "symbols": [/[0-9]/]},
-            {"name": "int$ebnf$1", "symbols": ["int$ebnf$1", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "int", "symbols": ["int$ebnf$1"]},
-            {"name": "_", "symbols": [{"literal":" "}]}
-        ]
-        , ParserStart: "Main"
-    }
-
-}

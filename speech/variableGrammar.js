@@ -1,30 +1,5 @@
-/**
- * Created by Jane on 5/17/2017.
- */
 
 var variableGrammar = {
-
-    "initialize_with_speech":{
-        Lexer: undefined,
-        ParserRules: [
-            {"name": "Main$subexpression$1$string$1", "symbols": [{"literal":"e"}, {"literal":"q"}, {"literal":"u"}, {"literal":"a"}, {"literal":"l"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "Main$subexpression$1", "symbols": ["Main$subexpression$1$string$1"]},
-            {"name": "Main$subexpression$1$string$2", "symbols": [{"literal":"i"}, {"literal":"s"}], "postprocess": function joiner(d) {return d.join('');}},
-            {"name": "Main$subexpression$1", "symbols": ["Main$subexpression$1$string$2"]},
-            {"name": "Main", "symbols": ["VAR", "_", "Main$subexpression$1", "_", "VALUE"]},
-            {"name": "VAR$ebnf$1", "symbols": [/[a-zA-Z]/]},
-            {"name": "VAR$ebnf$1", "symbols": ["VAR$ebnf$1", /[a-zA-Z]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "VAR", "symbols": ["VAR$ebnf$1"]},
-            {"name": "_", "symbols": [{"literal":" "}]},
-            {"name": "VALUE$ebnf$1", "symbols": [/[a-zA-Z]/]},
-            {"name": "VALUE$ebnf$1", "symbols": ["VALUE$ebnf$1", /[a-zA-Z]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "VALUE", "symbols": ["VALUE$ebnf$1"]},
-            {"name": "VALUE$ebnf$2", "symbols": [/[0-9]/]},
-            {"name": "VALUE$ebnf$2", "symbols": ["VALUE$ebnf$2", /[0-9]/], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-            {"name": "VALUE", "symbols": ["VALUE$ebnf$2"]}
-        ]
-        , ParserStart: "Main"
-    },
 
     "set_value":{
         Lexer: undefined,

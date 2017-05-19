@@ -73,20 +73,126 @@ initializeVariableList = function(){
 
 
 initializeToNumber = function(number, varBlock){
-    number_xml = Blockly.mainWorkspace.toolbox_.tree_.getChildren()[3].blocks[0];
-    numBlockSvg = Blockly.Xml.domToBlock(Blockly.mainWorkspace, number_xml)
-    //numBlock = new Block(numBlockSvg)
-    numBlockSvg.setFieldValue(number , "NUM");
+
     variableCon = varBlock.getConnections_(false)[2]
-    numberCon = numBlockSvg.getConnections_(false)[0]
-    variableCon.connect(numberCon);
+    if(variableCon.isConnected()){
+        var numBlockSvg = varBlock.getConnections_(false)[2].targetConnection.sourceBlock_;
+        numBlockSvg.setFieldValue(number , "NUM");
+        console.log(numBlockSvg);
+        console.log("already");
+    }else{
+        var number_xml = Blockly.mainWorkspace.toolbox_.tree_.getChildren()[3].blocks[0];
+        var numBlockSvg = Blockly.Xml.domToBlock(Blockly.mainWorkspace, number_xml)
+        //numBlock = new Block(numBlockSvg)
+        numBlockSvg.setFieldValue(number , "NUM");
+        var numberCon = numBlockSvg.getConnections_(false)[0]
+        variableCon.connect(numberCon);
+
+        var blockX = numBlockSvg.getRelativeToSurfaceXY()['x'];
+        var blockY = numBlockSvg.getRelativeToSurfaceXY()['y'];
+        var numBlock = new Block(numBlockSvg, [blockX, blockY]);
+        control.blocks.push(numBlock);
+
+    }
+
+
+    //if already exists, change the value
+
+
     //control.blocks.push(numBlock);
 }
 
-intializeVariableWithSpeech = function(){
-
-}
 
 makeVarBlock = function(varName, selectedBlock){
     selectedBlock.setFieldValue(varName , "VAR")
+    Blockly.mainWorkspace.variableList.push(varName);
+}
+
+
+
+/*
+ * Requires the user to first use gesture
+ * "equals [3]", "is [3]"
+ */
+function setValue(processedInterim){
+    var grammar = variableGrammar ["set_value"]
+    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
+    try {
+        console.log(processedInterim)
+        str = processedInterim;
+        parser.feed(processedInterim);
+        var result = parser.results;
+        console.log("set value")
+        console.log(result);
+        var value = processResult(result[0])[1]
+        console.log("value: "+value)
+        //assignValueToVariable(result);
+        initializeToNumber(value, Blockly.selected)
+
+
+        //process ended
+        processed = true;
+    } catch(parseError) {
+        console.log(
+            "Error at character " + parseError.offset
+        ); // "Error at character 2"
+    }
+}
+
+
+
+/*
+ * Requires the user to first use gesture
+ * "variable [y]"
+ */
+function createNewVariable(processedInterim){
+    var grammar = variableGrammar ["create_variable"]
+    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
+    try {
+        console.log(processedInterim)
+        str = processedInterim;
+        parser.feed(processedInterim);
+        var result = parser.results[0];
+        console.log("create neew");
+        console.log(result);
+        var name =  processResult(result)[1];
+        if(Blockly.mainWorkspace.variableList.indexOf(name) < 0){
+            makeVarBlock(name, Blockly.selected);
+            processed = true;
+        }
+
+    } catch(parseError) {
+        console.log(
+            "Error at character " + parseError.offset
+        ); // "Error at character 2"
+    }
+}
+
+/*
+ * "get [x]"
+ *
+ */
+function getCalledVariable(processedInterim){
+    var grammar = variableGrammar ["get_variable"]
+    parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
+    try {
+        console.log(processedInterim)
+        str = processedInterim;
+        parser.feed(processedInterim);
+        var result = parser.results[0];
+        console.log("get varr")
+        console.log(result);
+        var value = processResult(result)[1]
+        if(Blockly.mainWorkspace.variableList.indexOf(value) > -1){
+            getVariable(value, cursorPosition)
+            //assignValueToVariable(value);
+            processed = true;
+        }
+
+
+    } catch(parseError) {
+        console.log(
+            "Error at character " + parseError.offset
+        ); // "Error at character 2"
+    }
 }

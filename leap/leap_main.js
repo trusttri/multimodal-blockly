@@ -137,7 +137,7 @@ leapController = Leap.loop({enableGestures: true}, function (frame) {
                     if (control.currentBlock != null) { //let the block go
                         control.highlightCon();
                         control.stopMovingBlock();
-                        generateSpeech("placed!");
+                        Blockly.mainWorkspace.playAudio('click');
                     } else {
                         //find the closest block and highlight it
                         control.hoverOverViewer(cursorPosition);
