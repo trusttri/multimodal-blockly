@@ -7,7 +7,7 @@ var paused = true;
 var result;
 var parser;
 var str = "";
-var candidateParam = ["parameter", "param", "barometer", "input"];
+var candidateParam = ["parameter", "param", "barometer", "input", "durometer"];
 var candidatePlay = ["run", "Run", "letsrun"];
 var candidateDelete = ["delete", "remove"];
 var candidateStop = ["stop"];
@@ -41,7 +41,6 @@ recognition.onresult = function(event) {
     }
 
     for (var i = 0; i < event.results.length; i++) {
-        //console.log(event.results);
         var result = event.results[i];
         if (result.isFinal) {
             final = result[0].transcript;
@@ -78,7 +77,6 @@ recognition.onresult = function(event) {
         processed = true;
     }else if(userSaidStopAudio(interim)){
         stopAudio();
-        console.log("stop");
         processed = true;
     }
 
@@ -88,21 +86,19 @@ recognition.onresult = function(event) {
         if(processedInterim != ""){
             var grammar  = parameterGrammar[blockChosen.type]
             parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
-            console.log(blockChosen.type);
             try {
                 str = processedInterim;
                 parser.feed(processedInterim);
                 var result = parser.results[0];
-                console.log(result);
                 processParamsChosen(result, blockChosen);
                 generateSpeech("changed!");
                 //process ended
                 processed = true;
                 waitingForParams = false;
             } catch(parseError) {
-                console.log(
-                    "Error at character " + parseError.offset
-                ); // "Error at character 2"
+                // console.log(
+                //     "Error at character " + parseError.offset
+                // ); // "Error at character 2"
             }
         }
 
@@ -200,7 +196,6 @@ var processParamsChosen = function(parseResult, blockChosen){
             if(blockChosen.type == "math_number"){
                 blockChosen.setFieldValue(paramsChosen, "NUM");
             }else{
-                console.log(blockChosen.childBlocks_[idx]);
                 var idx = blockInfo[i]["idx"];
                 //below is only possible because currently there are only number input blocks
                 blockChosen.childBlocks_[idx].setFieldValue(paramChosen , "NUM");
@@ -234,13 +229,16 @@ var processInterim = function(transcript){
     })
 
     //process canddiates for variables
-    var variables = {'x':['EX', 'ex', 'Ex'], 'y':['Why', 'why'], 'get x':['jet X']};
+    var variables = {'x':['EX', 'ex', 'Ex', 'eggs', 'at'], 'y':['Why', 'why'], 'get x':['jet X']};
     Object.keys(variables).forEach(function(variable){
         var candidates = variables[variable];
         candidates.forEach(function(candidate){
             transcript = (transcript.trim()).replace(candidate, variable);
         })
     })
+
+    //check for color blue
+    trancript = transcript.replace("blew", "blue");
 
     return transcript;
 }
@@ -250,9 +248,7 @@ var processResult = function(result){
     var params = [];
     result.forEach(function(container){
         var splits = container[0];
-        console.log("splits");
-        console.log(container);
-        console.log(splits);
+
         if(typeof splits == "string"){
             if(splits != " "){
                 params.push(splits);
@@ -280,12 +276,15 @@ window.speechSynthesis.onvoiceschanged = function() {
 
 var generateSpeech = function(message, callback) {
     if (voicesReady) {
-        var message = new SpeechSynthesisUtterance();
-        message.voice = window.speechSynthesis.getVoices()[2];
-        message.text = message;
-        message.rate = 0.2;
-        if (typeof callback !== "undefined")
+        var msg = new SpeechSynthesisUtterance();
+        msg.voice = window.speechSynthesis.getVoices()[2];
+        msg.text = message;
+        msg.rate = 0.2;
+        if (typeof callback !== "undefined"){
             msg.onend = callback;
+        }
+
+
         speechSynthesis.speak(msg);
     }
 };

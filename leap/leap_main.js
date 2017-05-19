@@ -151,7 +151,7 @@ leapController = Leap.loop({enableGestures: true}, function (frame) {
             if (hoveringPlace == "viewer") {
                 if (Blockly.mainWorkspace.toolbox_.flyout_.isVisible()) {//is flyout open?
                     if (control.currentBlock == null && checkInFlyout(cursorPosition)) {
-                        console.log("trying to get from flyout");
+
                         control.getBlockFromDrawer(cursorPosition);
                         control.closeFlyout();
                     }
@@ -164,7 +164,7 @@ leapController = Leap.loop({enableGestures: true}, function (frame) {
                         //control.listenForConnection();
 
                     } else {
-                        console.log("trying to get from viewr");
+
                         control.getBlockFromViewer(cursorPosition);
                     }
 

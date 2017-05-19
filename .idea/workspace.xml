@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55ca4b4-5dd4-4523-b164-857b4262ff51" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/leap/control_leap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/leap/models_multimodal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/speech/config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/box.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/grasslight-big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/rocks.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55+x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55+y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55+z.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55-x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55-y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vr/images/skyX55-z.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code.js" afterPath="$PROJECT_DIR$/code.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech/parameterGrammar.js" afterPath="$PROJECT_DIR$/speech/parameterGrammar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leap/control.js" afterPath="$PROJECT_DIR$/leap/control.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leap/leap_main.js" afterPath="$PROJECT_DIR$/leap/leap_main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech/setupSpeech.js" afterPath="$PROJECT_DIR$/speech/setupSpeech.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech/variable.js" afterPath="$PROJECT_DIR$/speech/variable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech/variableGrammar.js" afterPath="$PROJECT_DIR$/speech/variableGrammar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vr/background.js" afterPath="$PROJECT_DIR$/vr/background.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,31 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="block.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leap/block.js">
+      <file leaf-file-name="control.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leap/control.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-972">
-              <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blockly/msg/js/en.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+            <state relative-caret-position="280">
+              <caret line="98" column="45" lean-forward="false" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -70,48 +36,48 @@
       <file leaf-file-name="leap_main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leap/leap_main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-849">
-              <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+            <state relative-caret-position="322">
+              <caret line="156" column="21" lean-forward="true" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leap-plugins.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leap/leap-plugins.min.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="19" column="1965" lean-forward="false" selection-start-line="19" selection-start-column="1965" selection-end-line="19" selection-end-column="1965" />
+            <state relative-caret-position="479">
+              <caret line="252" column="20" lean-forward="false" selection-start-line="252" selection-start-column="20" selection-end-line="252" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setupSpeech.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vr/background.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setupSpeech.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/speech/setupSpeech.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="154">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="code.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="code.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8883">
-              <caret line="563" column="5" lean-forward="true" selection-start-line="563" selection-start-column="5" selection-end-line="563" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameterDictionary.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/speech/parameterDictionary.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+            <state relative-caret-position="-2">
+              <caret line="538" column="33" lean-forward="true" selection-start-line="538" selection-start-column="33" selection-end-line="538" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -120,8 +86,28 @@
       <file leaf-file-name="variableGrammar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/speech/variableGrammar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
+            <state relative-caret-position="187">
               <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameterDictionary.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech/parameterDictionary.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3066">
+              <caret line="146" column="13" lean-forward="false" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="variable.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech/variable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="179" column="13" lean-forward="true" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -130,8 +116,8 @@
       <file leaf-file-name="parameterGrammar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/speech/parameterGrammar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="259">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -149,29 +135,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mouse</find>
-      <find>new Blpush</find>
-      <find>generateSp</find>
-      <find>control.</find>
-      <find>speech</find>
-      <find>initializeTo</find>
-      <find>isconn</find>
-      <find>init</find>
-      <find>initi</find>
-      <find>extractVarname</find>
-      <find>createNew</find>
-      <find>get</find>
-      <find>initialize</find>
-      <find>candidateNumber</find>
-      <find>usersaidnumber</find>
-      <find>candidateDirec</find>
-      <find>usersaiddir</find>
       <find>usersaiddire</find>
       <find>candidateset</find>
       <find>usersai</find>
       <find>usersaidset</find>
       <find>initialize_</find>
-      <find>process</find>
       <find>processInter</find>
       <find>get ID</find>
       <find>modal</find>
@@ -179,6 +147,24 @@
       <find>parameterGrammar</find>
       <find>playaudio</find>
       <find>msg/js/</find>
+      <find>processI</find>
+      <find>get x</find>
+      <find>createNew</find>
+      <find>createnew</find>
+      <find>get varr</find>
+      <find>process</find>
+      <find>generatespeech</find>
+      <find>generates</find>
+      <find>get</find>
+      <find>et</find>
+      <find>processed</find>
+      <find>generate</find>
+      <find>generateSpeech</find>
+      <find>createNewVariable</find>
+      <find>console.log</find>
+      <find>processIn</find>
+      <find>color</find>
+      <find>getCalledV</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,16 +186,16 @@
         <option value="$PROJECT_DIR$/stylesheet/style.css" />
         <option value="$PROJECT_DIR$/leap/models_multimodal.js" />
         <option value="$PROJECT_DIR$/leap/control_leap.js" />
-        <option value="$PROJECT_DIR$/vr/background.js" />
-        <option value="$PROJECT_DIR$/leap/leap_main.js" />
-        <option value="$PROJECT_DIR$/speech/variable.js" />
         <option value="$PROJECT_DIR$/leap/block.js" />
         <option value="$PROJECT_DIR$/speech/variableGrammar.js" />
-        <option value="$PROJECT_DIR$/leap/control.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/speech/parameterGrammar.js" />
-        <option value="$PROJECT_DIR$/speech/setupSpeech.js" />
         <option value="$PROJECT_DIR$/code.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/vr/background.js" />
+        <option value="$PROJECT_DIR$/leap/control.js" />
+        <option value="$PROJECT_DIR$/leap/leap_main.js" />
+        <option value="$PROJECT_DIR$/speech/variable.js" />
+        <option value="$PROJECT_DIR$/speech/setupSpeech.js" />
       </list>
     </option>
   </component>
@@ -253,6 +239,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multimodal-blockly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,18 +439,18 @@
       <workItem from="1495161843976" duration="3378000" />
       <workItem from="1495167320067" duration="4614000" />
       <workItem from="1495190019963" duration="2008000" />
-      <workItem from="1495192623217" duration="1749000" />
+      <workItem from="1495192623217" duration="5837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44393000" />
+    <option name="totallyTimeSpent" value="48481000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.228125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09739583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -648,17 +648,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/speech/config.js" />
-    <entry file="file://$PROJECT_DIR$/vr/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/core/block_drag_surface.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2415">
           <caret line="133" column="5" lean-forward="false" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -693,30 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speech/variable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4158">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leap/control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5487">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leap/leap_main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-849">
-          <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leap/leap-plugins.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -733,38 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speech/variableGrammar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/parameterDictionary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/parameterGrammar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech/setupSpeech.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blockly/msg/js/en.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -775,16 +715,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="479">
+          <caret line="252" column="20" lean-forward="false" selection-start-line="252" selection-start-column="20" selection-end-line="252" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leap/leap_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="156" column="21" lean-forward="true" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leap/control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="98" column="45" lean-forward="false" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vr/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8883">
-          <caret line="563" column="5" lean-forward="true" selection-start-line="563" selection-start-column="5" selection-end-line="563" selection-end-column="5" />
+        <state relative-caret-position="-2">
+          <caret line="538" column="33" lean-forward="true" selection-start-line="538" selection-start-column="33" selection-end-line="538" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/variable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="179" column="13" lean-forward="true" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/parameterDictionary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3066">
+          <caret line="146" column="13" lean-forward="false" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/parameterGrammar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/variableGrammar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech/setupSpeech.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding />
         </state>
       </provider>

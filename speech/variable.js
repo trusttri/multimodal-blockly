@@ -78,8 +78,6 @@ initializeToNumber = function(number, varBlock){
     if(variableCon.isConnected()){
         var numBlockSvg = varBlock.getConnections_(false)[2].targetConnection.sourceBlock_;
         numBlockSvg.setFieldValue(number , "NUM");
-        console.log(numBlockSvg);
-        console.log("already");
     }else{
         var number_xml = Blockly.mainWorkspace.toolbox_.tree_.getChildren()[3].blocks[0];
         var numBlockSvg = Blockly.Xml.domToBlock(Blockly.mainWorkspace, number_xml)
@@ -118,14 +116,12 @@ function setValue(processedInterim){
     var grammar = variableGrammar ["set_value"]
     parser = new nearley.Parser(grammar.ParserRules, grammar.ParserStart);
     try {
-        console.log(processedInterim)
         str = processedInterim;
         parser.feed(processedInterim);
         var result = parser.results;
-        console.log("set value")
-        console.log(result);
+
         var value = processResult(result[0])[1]
-        console.log("value: "+value)
+
         //assignValueToVariable(result);
         initializeToNumber(value, Blockly.selected)
 
@@ -153,10 +149,11 @@ function createNewVariable(processedInterim){
         str = processedInterim;
         parser.feed(processedInterim);
         var result = parser.results[0];
-        console.log("create neew");
-        console.log(result);
         var name =  processResult(result)[1];
+        console.log("hooooooooo")
         if(Blockly.mainWorkspace.variableList.indexOf(name) < 0){
+            console.log("nooooooooo")
+            console.log(name)
             makeVarBlock(name, Blockly.selected);
             processed = true;
         }
@@ -181,8 +178,8 @@ function getCalledVariable(processedInterim){
         parser.feed(processedInterim);
         var result = parser.results[0];
         console.log("get varr")
-        console.log(result);
         var value = processResult(result)[1]
+        console.log(value)
         if(Blockly.mainWorkspace.variableList.indexOf(value) > -1){
             getVariable(value, cursorPosition)
             //assignValueToVariable(value);

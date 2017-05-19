@@ -17,7 +17,7 @@ function addBackground(){
         createMaterial( '/media/vr_images/skyX55+z.png' ), // back
         createMaterial( '/media/vr_images/skyX55-z.png' )  // front
     ];
-    console.log("hoooo");
+
     // Create a large cube
     var mesh = new THREE.Mesh( new THREE.BoxGeometry( 500, 500, 500, 1, 1, 1 ), new THREE.MeshFaceMaterial( materials ) );
 

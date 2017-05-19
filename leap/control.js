@@ -103,7 +103,6 @@
                     if(blocksBoundary[i] < currentX && currentX < blocksBoundary[i+1]){
 
                         this.candidateBlock = Blockly.mainWorkspace.toolbox_.flyout_.currentBlocks[i];
-                        console.log(this.candidateBlock);
                         this.candidateBlock.select();
 
                         break;
